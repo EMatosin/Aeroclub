@@ -119,5 +119,7 @@
         \n\nPréparez les falafels : épluchez et coupez grossièrement l oignon et l ail, passez-les au robot avec les pois chiches, les épices et la coriandre, jusqu à l obtention d une pâte lisse et consistante. Salez, poivrez. Façonnez des boulettes de la taille d une noix en les aplatissant légèrement.
         \n\nChauffez l huile de friture à 180°C et faites frire les falafels 3 à 4 minutes, jusqu à ce qu ils soient bien dorés. Egouttez-les sur du papier absorbant.
         \n\nServez les falafels avec les sauces et des crudités.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

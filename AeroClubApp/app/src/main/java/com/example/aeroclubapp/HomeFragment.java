@@ -36,15 +36,15 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        recyclerView = findViewById(R.id.recyclerView);
-        fab = findViewById(R.id.fab);
-        searchView = findViewById(R.id.search);
+        recyclerView = view.findViewById(R.id.recyclerView);
+        fab = view.findViewById(R.id.fab);
+        searchView = view.findViewById(R.id.search);
         searchView.clearFocus();
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(HomeFragment.this, 1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(HomeFragment.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
 
         dataList = new ArrayList<>();
 
-        adapter = new MyAdapter(MainActivity.this, dataList);
+        adapter = new MyAdapter(getContext(), dataList);
         recyclerView.setAdapter(adapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Android Tutorials");
@@ -90,7 +90,7 @@ public class HomeFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeFragment.this, UploadActivity.class);
+                Intent intent = new Intent(getContext(), UploadActivity.class);
                 startActivity(intent);
             }
         });

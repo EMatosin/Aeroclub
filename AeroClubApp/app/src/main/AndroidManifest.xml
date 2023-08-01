@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AeroClubApp"
         tools:targetApi="31">
         <activity
+            android:name=".UpdateActivity"
+            android:exported="false" />
+        <activity
             android:name=".UploadActivity"
             android:exported="false" />
         <activity
