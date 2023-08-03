@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">CookFusion</string>
+    <string name="app_name">AeroClubApp</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
+
+
     //currywurst
     <string name="curryIngredients">1 gros oignon
         \n1 cuillère(s) à soupe d huile
@@ -119,7 +121,85 @@
         \n\nPréparez les falafels : épluchez et coupez grossièrement l oignon et l ail, passez-les au robot avec les pois chiches, les épices et la coriandre, jusqu à l obtention d une pâte lisse et consistante. Salez, poivrez. Façonnez des boulettes de la taille d une noix en les aplatissant légèrement.
         \n\nChauffez l huile de friture à 180°C et faites frire les falafels 3 à 4 minutes, jusqu à ce qu ils soient bien dorés. Egouttez-les sur du papier absorbant.
         \n\nServez les falafels avec les sauces et des crudités.</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //cavevin
+    <string name="cavevinadresse">La Cave du Terroir : Semousies 12avenue du géneral leclerc
+        \nLa Cantine des Cépages : Cannes 21bis rue du goulag
+        \nLa Cave du Château : Bordeaux 08 avenue du traité de rome
+        \nLa Grange des Crus : Vallée de la Loire 32ter rue du fleuve</string>
+    <string name="cavevin">
+        \nLa Cave du Terroir
+        \nSituée au cœur des vignobles pittoresques de la région de Bourgogne, la Cave du Terroir est un véritable trésor pour les amateurs de vins fins. Cette cave à vin historique, logée dans une cave voûtée du XVIIe siècle, offre une ambiance élégante et raffinée. Vous serez transporté dans l univers des vins de Bourgogne, avec une sélection exceptionnelle de grands crus tels que le prestigieux Romanée-Conti, le Pommard Premier Cru et le Meursault.
+        \n\nLa Cantine des Cépages
+        \nSituée dans le sud ensoleillé de la France, la Cantine des Cépages est une cave à vin moderne et innovante, combinant tradition et créativité. Les murs en verre et l éclairage subtil créent une atmosphère contemporaine et accueillante. Vous y découvrirez une large gamme de vins français et internationaux, mettant en valeur des cépages rares et insolites. Laissez-vous tenter par un Vermentino sarde rafraîchissant ou par un vin rouge corsé de l appellation Rhône.
+        \n\n La Cave du Château
+        \n Située au cœur du vignoble bordelais, la Cave du Château est une adresse incontournable pour les amateurs de vins classiques et prestigieux. Cette cave à vin, abritée dans un élégant château du XIXe siècle, offre une atmosphère noble et sophistiquée. Explorez les célèbres vignobles de Margaux, Pauillac et Saint-Émilion à travers une sélection exceptionnelle de vins rouges de renommée mondiale, tels que le Château Lafite Rothschild, le Château Mouton Rothschild et le Château Cheval Blanc.
+        \n\n La Grange des Crus
+        Située dans la vallée de la Loire, la Grange des Crus est une charmante cave à vin nichée au cœur d un domaine viticole familial. Cette cave rustique et conviviale offre une atmosphère chaleureuse et authentique. Découvrez les vins uniques de la région, des Sancerres aux arômes floraux et minéraux aux vins doux de l appellation Coteaux du Layon. Les propriétaires passionnés se feront un plaisir de partager leur savoir-faire et de vous faire déguster des vins locaux produits avec amour.</string>
+
+    //cuisinehotel
+    <string name="cuisinehoteladresse">
+        \nLa Cuisine Gastronomique de l Hôtel Étoile Paris 18bis avenue saint-michel
+        \n Le Bistrot Rustique de l Hôtel Provence  cannes 32 avenue de la mer
+        \n La Cuisine Fusion de l Hôtel Métropole   Marseilles 14 rue de la mémousain
+        \n Le Restaurant Bio de l Hôtel Nature      Angers 28 rue victor</string>
+    <string name="cuisinehotel">
+        \n\nLa Cuisine Gastronomique de l Hôtel Étoile
+        \nL hôtel Étoile est fier de sa cuisine gastronomique réputée, offrant une expérience culinaire exceptionnelle. La cuisine est dirigée par un chef étoilé, passionné par l art de créer des plats exquis. Les saveurs délicates et les techniques de cuisson innovantes sont mises en valeur dans chaque assiette. Les ingrédients frais et de saison sont sélectionnés avec soin pour garantir des plats raffinés, allant des créations contemporaines aux classiques revisités. Le cadre élégant et le service attentif ajoutent une touche de sophistication à cette expérience culinaire inoubliable.
+        \n\nLe Bistrot Rustique de l Hôtel Provence
+        L Hôtel Provence abrite un charmant bistrot rustique qui met en valeur la cuisine traditionnelle de la région. Les plats sont préparés avec des produits frais provenant des marchés locaux, mettant en avant les saveurs méditerranéennes authentiques. Les herbes aromatiques, l huile d olive de qualité et les légumes du jardin créent des plats simples mais délicieux. Le cadre convivial et décontracté du bistrot offre une atmosphère accueillante pour savourer des plats réconfortants, des plats de viande braisée aux salades fraîches et colorées, le tout accompagné d une sélection de vins régionaux.
+        \n\nLa Cuisine Fusion de l Hôtel Métropole
+        L Hôtel Métropole propose une cuisine fusion audacieuse, mariant habilement les saveurs et les techniques culinaires du monde entier. Inspirée par les voyages du chef et sa passion pour l expérimentation, la cuisine fusion de l hôtel offre une explosion de goûts et de textures. Des sushis créatifs aux tapas revisités, en passant par les plats épicés de la cuisine asiatique, chaque bouchée est une expérience culinaire unique. Le décor moderne et sophistiqué de la salle à manger crée une ambiance contemporaine, tandis que le personnel attentionné guide les convives à travers un voyage gustatif extraordinaire.
+        \n\nLe Restaurant Bio de l Hôtel Nature
+        L Hôtel Nature propose un restaurant bio, mettant en valeur une cuisine saine et respectueuse de l environnement. Les ingrédients biologiques et locaux sont la pierre angulaire de chaque plat, permettant aux saveurs naturelles de s exprimer pleinement. Des légumes frais du potager de l hôtel aux viandes et poissons provenant de producteurs régionaux responsables, chaque repas est un hommage à la nature. Les menus sont conçus pour répondre aux besoins des végétariens, des végétaliens et des amateurs de cuisine sans gluten, offrant une variété de plats créatifs et équilibrés. Le cadre de l hôtel, entouré de paysages pittoresques, crée une atmosphère apaisante pour profiter d une cuisine saine et délicieuse.</string>
+
+
+    //salledegustation
+    <string name="salledegustationadresse">
+        \nLa Cave Énigmatique Paris
+        \nLa Terrasse des Vignobles saint-émillion
+        \nLa Cantine Urbaine Marseilles
+        \nLa Grotte Secrète Ardéche</string>
+    <string name="salledegustation">
+        \n\nLa Cave Énigmatique
+        La Cave Énigmatique est une salle de dégustation intrigante, située dans un recoin caché d un bâtiment historique. Vous êtes accueilli par une atmosphère mystérieuse, avec des éclairages tamisés et des murs en pierre recouverts de vignes grimpantes. Des étagères remplies de bouteilles obscures et mystérieuses vous entourent. Le sommelier expert vous guide à travers une dégustation à l aveugle, où vous devrez deviner les cépages et les régions viticoles à partir du goût et de l arôme. C est une expérience ludique et intrigante qui éveillera vos sens et votre curiosité.
+        \n\nLa Terrasse des VignoblesLa Terrasse des Vignobles offre une salle de dégustation en plein air, offrant une vue imprenable sur les vignobles environnants. Installée sur une terrasse surélevée, cette salle de dégustation est baignée de lumière naturelle et entourée d une végétation luxuriante. Des tables élégamment dressées vous invitent à vous détendre et à déguster une sélection de vins raffinés. Le sommelier vous guide à travers chaque vin, en partageant des connaissances sur les cépages, les terroirs et les techniques de vinification. C est une expérience immersive qui vous permet de vous connecter avec la nature et d apprécier les vins dans un cadre pittoresque.
+        \n\nLa Cantine Urbaine
+        La Cantine Urbaine est une salle de dégustation moderne et branchée, située au cœur de la ville. L atmosphère est jeune et dynamique, avec des murs en briques apparentes et un mobilier contemporain. Des écrans interactifs affichent des informations sur les vins et les accords mets-vins. Des sommeliers passionnés vous guident à travers une dégustation interactive, où vous pouvez choisir parmi une variété de vins à partir de distributeurs en libre-service. Vous pouvez explorer différentes régions viticoles, en vous laissant surprendre par des vins innovants et des appellations moins connues. C est une expérience moderne et décontractée, idéale pour les amateurs de vin novices et expérimentés.
+        \n\nLa Grotte Secrète
+        La Grotte Secrète est une salle de dégustation unique, située dans une grotte naturelle. Vous descendez un escalier étroit et sinueux pour entrer dans cet espace fascinant, éclairé par des chandelles et des lumières tamisées. Les parois rocheuses vous entourent, créant une atmosphère intime et mystique. Les vins sont présentés dans des tonneaux en bois rustiques, ajoutant une touche d authenticité à l expérience. Les sommeliers expérimentés vous guident à travers une dégustation immersive, en partageant des anecdotes sur les traditions viticoles et les caractéristiques uniques de chaque vin. C est une expérience inoubliable qui vous transporte dans un autre monde.</string>
+
+    //salledemonstration
+    <string name="salledemonstrationadresse">
+        \nLa Cuisine Créative
+        \nL Art de la Pâtisserie
+        \nLe Bar à Cocktails
+        \nLa Salle des Accords Mets-Vins</string>
+    <string name="salledemonstration">
+        \n\nLa Cuisine Créative
+        La salle de démonstration de La Cuisine Créative est un espace moderne et lumineux, conçu pour inspirer votre créativité culinaire. Les murs sont ornés d étagères remplies d épices exotiques et d ingrédients colorés. Des îlots de cuisine équipés des dernières technologies vous invitent à participer à des démonstrations interactives. Des chefs talentueux vous guident à travers des techniques de cuisine innovantes, des associations de saveurs audacieuses et des présentations artistiques. C est une expérience immersive qui vous permet d apprendre de nouvelles techniques et de repousser les limites de votre créativité en cuisine.
+        \n\nL Art de la Pâtisserie
+        La salle de démonstration de L Art de la Pâtisserie est un paradis pour les amateurs de sucré. Les comptoirs en marbre sont ornés de moules à gâteaux élégants et de petits ustensiles de pâtisserie. Les murs sont habillés de croquis de desserts alléchants et de photographies de créations sucrées. Des pâtissiers talentueux vous guident à travers des démonstrations de techniques de pâtisserie avancées, des astuces de décoration de gâteaux et des conseils pour créer des desserts aussi beaux que délicieux. C est une expérience gourmande qui éveille vos sens et vous initie à l art de la pâtisserie.
+
+        \n\nLe Bar à Cocktails
+        Le Bar à Cocktails est une salle de démonstration animée, conçue pour vous initier à l art de la mixologie. Le comptoir en bois est garni de bouteilles de spiritueux de qualité, de verres à cocktail élégants et de fruits frais colorés. Des barmans chevronnés vous dévoilent les secrets de la création de cocktails classiques et contemporains. Vous apprendrez les techniques de mélange, de garniture et de présentation, ainsi que l art de marier les saveurs et les textures. C est une expérience interactive et festive qui vous permet de devenir un véritable expert en cocktails.
+        \n\nLa Salle des Accords Mets-Vins
+        La Salle des Accords Mets-Vins est un espace sophistiqué dédié à l art de l harmonisation des saveurs. Les murs sont ornés de tableaux représentant des vignobles pittoresques et des scènes de cuisine. Des tables élégamment dressées vous invitent à participer à des démonstrations de dégustation guidées par des sommeliers experts. Vous découvrirez les principes de base de l accord mets-vins, en explorant différentes combinaisons de plats et de vins. Des démonstrations interactives vous permettent de découvrir les subtilités des saveurs, les interactions entre les textures et les arômes, et comment créer des accords parfaits. C est une expérience éducative qui ravira les amateurs de vin et de gastronomie.</string>
+
+    //sallereception
+    <string name="sallereceptionadresse">
+        \nLe Salon Impérial
+        \nLa Terrasse Enchantée
+        \nLe Loft Industriel
+        \nLa Salle Bohème</string>
+    <string name="sallereception">
+        \n\nLe Salon Impérial
+        Le Salon Impérial est une salle de réception somptueuse, idéale pour des événements élégants et prestigieux. Les hauts plafonds ornés de lustres étincelants créent une ambiance de grandeur et de raffinement. Les murs sont décorés de riches tapisseries et de moulures élaborées. Des tables rondes couvertes de nappes en satin et des chaises rembourrées d un velours luxueux sont disposées avec soin. C est l endroit parfait pour des mariages somptueux, des galas de charité ou des réceptions royales.
+        \n\nLa Terrasse Enchantée
+        La Terrasse Enchantée est une salle de réception en plein air, offrant une vue imprenable sur un paysage pittoresque. Des arbres majestueux, des jardins fleuris et une fontaine centrale créent une ambiance romantique et féerique. Des guirlandes lumineuses et des lanternes suspendues ajoutent une touche de magie à l endroit. Des tables élégamment dressées avec des centres de table floraux sont disposées sur la terrasse, offrant un cadre enchanteur pour des mariages en plein air, des soirées de cocktail ou des événements d été.
+        \n\nLe Loft Industriel
+        Le Loft Industriel est une salle de réception au style moderne et urbain, située dans un ancien entrepôt rénové. Les murs en briques apparentes, les poutres en acier et les hauts plafonds créent une ambiance industrielle chic. Des lustres contemporains et des jeux de lumières donnent une touche d élégance à l espace. Des tables en bois brut, des chaises métalliques et un mobilier minimaliste complètent le style urbain. C est un cadre idéal pour des événements branchés tels que des lancements de produits, des soirées privées ou des expositions artistiques.
+        \n\nLa Salle Bohème
+        La Salle Bohème est un espace de réception intime et bohème, créant une atmosphère décontractée et artistique. Les murs sont ornés de tentures colorées, de tapis ethniques et de peintures abstraites. Des canapés confortables et des poufs sont disposés pour créer des espaces de détente. Des tables basses en bois et des sièges en rotin ajoutent une touche bohème à l ambiance. C est l endroit idéal pour des mariages informels, des soirées lounge ou des événements culturels alternatifs.</string>
 
 </resources>

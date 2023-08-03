@@ -6,15 +6,6 @@ public class DataClass {
     private String dataDesc;
     private String dataLang;
     private String dataImage;
-    private String key;
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
 
     public String getDataTitle() {
         return dataTitle;
@@ -37,8 +28,5 @@ public class DataClass {
         this.dataDesc = dataDesc;
         this.dataLang = dataLang;
         this.dataImage = dataImage;
-    }
-    public DataClass(){
-
     }
 }
