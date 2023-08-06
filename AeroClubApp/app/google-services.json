@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "219909786242",
-    "project_id": "aeroclub-app",
-    "storage_bucket": "aeroclub-app.appspot.com"
+    "project_number": "804157332539",
+    "project_id": "aeroclubapp",
+    "storage_bucket": "aeroclubapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:219909786242:android:b9c2c9e92e41f6fe1e429b",
+        "mobilesdk_app_id": "1:804157332539:android:eba9b02742d3004a95d01e",
         "android_client_info": {
           "package_name": "com.example.aeroclubapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "219909786242-bh51o7gds3v5dfva9c821kdjnr3btrfc.apps.googleusercontent.com",
+          "client_id": "804157332539-o109824lhhagpq0mrjl1599phmm7q2tb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAwoO0YWDerZZUoBOWIuJiNhqOUa6jVzpk"
+          "current_key": "AIzaSyC0xwTzKbVr-T8r5qop4iOWZuCWSKLbyCo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "219909786242-bh51o7gds3v5dfva9c821kdjnr3btrfc.apps.googleusercontent.com",
+              "client_id": "804157332539-o109824lhhagpq0mrjl1599phmm7q2tb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
