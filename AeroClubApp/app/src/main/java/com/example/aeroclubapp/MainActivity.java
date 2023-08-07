@@ -28,10 +28,13 @@ public class MainActivity extends AppCompatActivity {
 
             if (itemId == R.id.home) {
                 replaceFragment(new HomeFragment());
-            } else if (itemId == R.id.shorts) {
-                replaceFragment(new HomeFragment());            } else if (itemId == R.id.subscriptions) {
-                replaceFragment(new HomeFragment());            } else if (itemId == R.id.library) {
-                replaceFragment(new HomeFragment());            }
+            } else if (itemId == R.id.basicService) {
+                replaceFragment(new BasicServiceFragment());
+            } else if (itemId == R.id.aeroclub) {
+                replaceFragment(new HomeFragment());
+            } else if (itemId == R.id.library) {
+                replaceFragment(new HomeFragment());
+            }
             return true;
         });
 

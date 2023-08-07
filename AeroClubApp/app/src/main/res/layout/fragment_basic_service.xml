@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SubscriptionsFragment">
+    tools:context=".BasicServiceFragment">
 
     <ListView
         android:id="@+id/listView"
@@ -14,7 +14,7 @@
         android:scrollbars="vertical"
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="-39dp"
-        tools:listitem="@layout/list_item" />
+        tools:listitem="@layout/list_basic_service_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

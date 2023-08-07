@@ -13,26 +13,24 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class ListAdapter extends ArrayAdapter<ListData> {
-    public ListAdapter(@NonNull Context context, ArrayList<ListData> dataArrayList) {
-        super(context, R.layout.list_item, dataArrayList);
+public class ListBasicServiceAdapter extends ArrayAdapter<ListBasicServiceData> {
+    public ListBasicServiceAdapter(@NonNull Context context, ArrayList<ListBasicServiceData> dataArrayList) {
+        super(context, R.layout.list_basic_service_item, dataArrayList);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View view, @NonNull ViewGroup parent) {
-        ListData data = getItem(position);
+        ListBasicServiceData data = getItem(position);
         if (view == null) {
-            view = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+            view = LayoutInflater.from(getContext()).inflate(R.layout.list_basic_service_item, parent, false);
         }
 
-        ImageView listImage = view.findViewById(R.id.listImage);
+        ImageView listImage = view.findViewById(R.id.listBasicServiceImage);
         TextView listName = view.findViewById(R.id.listName);
-        TextView listTime = view.findViewById(R.id.listTime);
 
         listImage.setImageResource(data.image);
         listName.setText(data.name);
-        listTime.setText(data.time);
 
         return view;
     }

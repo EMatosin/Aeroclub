@@ -10,13 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".DetailedLocalsActivity">
+        tools:context=".DetailedBasicServiceActivity">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/detailName"
-            android:text="Lieu Choisi"
+            android:text="Service basique choisi"
             android:textSize="24sp"
             android:textColor="@color/blue"
             android:textStyle="bold"
@@ -40,10 +40,12 @@
 
         </androidx.cardview.widget.CardView>
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Capacité du lieu:"
+            android:text="Description du service basique:"
+            android:layout_gravity="center"
             android:textColor="@color/blue"
             android:textStyle="bold"
             android:layout_marginStart="10dp"
@@ -53,43 +55,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Capacité"
-            android:layout_marginStart="10dp"
-            android:textSize="16sp"
-            android:id="@+id/detailCapacity"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Adresse:"
-            android:textColor="@color/blue"
-            android:textStyle="bold"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cavevinadresse"
-            android:layout_marginStart="10dp"
-            android:textSize="16sp"
-            android:id="@+id/detailAddress"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description du lieu:"
-            android:textColor="@color/blue"
-            android:textStyle="bold"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/cavevin"
+            android:text="@string/ravitaillement"
             android:layout_marginStart="10dp"
             android:textSize="16sp"
             android:id="@+id/detailDesc"/>

@@ -1,6 +1,6 @@
 package com.example.aeroclubapp;
 
-public class DataClass {
+public class DataClassUser {
 
     private String dataTitle;
     private String dataDesc;
@@ -23,7 +23,7 @@ public class DataClass {
         return dataImage;
     }
 
-    public DataClass(String dataTitle, String dataDesc, String dataLang, String dataImage) {
+    public DataClassUser(String dataTitle, String dataDesc, String dataLang, String dataImage) {
         this.dataTitle = dataTitle;
         this.dataDesc = dataDesc;
         this.dataLang = dataLang;

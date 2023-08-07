@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/home"
-        android:title="Home"
+        android:title="Menu "
         android:icon="@drawable/baseline_home_24"/>
 
     <item
-        android:id="@+id/shorts"
-        android:title="Shorts"
-        android:icon="@drawable/baseline_whatshot_24"/>
+        android:id="@+id/basicService"
+        android:title="Services"
+        android:icon="@drawable/baseline_construction_24"/>
 
     <item
-        android:id="@+id/subscriptions"
-        android:title="Subscriptions"
-        android:icon="@drawable/baseline_subscriptions_24"/>
+        android:id="@+id/aeroclub"
+        android:title="AéroClub"
+        android:icon="@drawable/baseline_paragliding_24"/>
 
     <item
         android:id="@+id/library"
-        android:title="Library"
-        android:icon="@drawable/baseline_video_library_24"/>
+        android:title="A voir"
+        android:icon="@drawable/baseline_question_mark_24"/>
 
 </menu>
