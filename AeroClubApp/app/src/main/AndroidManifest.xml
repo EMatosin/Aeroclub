@@ -15,6 +15,18 @@
         android:theme="@style/Theme.AeroClubApp"
         tools:targetApi="31">
         <activity
+            android:name=".MeteoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NettoyageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StationnementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RavitaillementActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailedBasicServiceActivity"
             android:exported="false" />
         <activity
