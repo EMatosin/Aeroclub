@@ -6,6 +6,17 @@ public class DataClassUser {
     private String dataDesc;
     private String dataLang;
     private String dataImage;
+    private String fuelType;
+    private String quantity;
+
+
+    public String getFuelType() {
+        return fuelType;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
 
     public String getDataTitle() {
         return dataTitle;
@@ -28,5 +39,10 @@ public class DataClassUser {
         this.dataDesc = dataDesc;
         this.dataLang = dataLang;
         this.dataImage = dataImage;
+    }
+
+    public DataClassUser(String fuelType, String quantity) {
+        this.fuelType = fuelType;
+        this.quantity = quantity;
     }
 }

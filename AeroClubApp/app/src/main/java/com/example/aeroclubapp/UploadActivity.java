@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -117,6 +118,12 @@ public class UploadActivity extends AppCompatActivity {
         String title = uploadTopic.getText().toString();
         String desc = uploadDesc.getText().toString();
         String lang = uploadLang.getText().toString();
+
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("title", title);
+        editor.apply();
 
         DataClassUser dataClass = new DataClassUser(title, desc, lang, imageURL);
 

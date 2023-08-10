@@ -5,15 +5,78 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="40dp"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".RavitaillementActivity">
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:background="@android:color/white">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ravitaillement"
-        android:layout_gravity="center"/>
+        android:text="Choisissez le type de produit pétrolier"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="32dp"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonJETA1noTIC"
+        android:text="JETA1 Sans TIC"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonJETA1"
+        android:text="JETA1 + TIC"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAVGASnoTIC"
+        android:text="AVGAS 100LL sans TIC"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAVGAS"
+        android:text="AVGAS 100ll TIC"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fuelQuantity"
+        android:background="@drawable/custom_edittext"
+        android:padding="16dp"
+        android:hint="Précisez ici le nombre de litres souhaité"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginTop="32dp"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Enregistrer"
+        android:id="@+id/saveButtonFuel"
+        android:textSize="18sp"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>
-
