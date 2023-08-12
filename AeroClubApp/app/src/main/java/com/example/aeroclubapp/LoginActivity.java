@@ -4,6 +4,7 @@ package com.example.aeroclubapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import android.content.Intent;
@@ -13,15 +14,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText loginEmail, loginPassword;
+    private EditText loginEmail, loginPassword, loginPseudo;
     private TextView signupRedirectText;
     private Button loginButton;
     private FirebaseAuth auth;
@@ -34,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
+        loginPseudo = findViewById(R.id.login_pseudo);
         signupRedirectText = findViewById(R.id.signUpRedirectText);
 
         auth = FirebaseAuth.getInstance();
@@ -44,6 +54,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 String email = loginEmail.getText().toString();
                 String pass = loginPassword.getText().toString();
+
 
                 if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     if (!pass.isEmpty()) {
@@ -63,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this, "Connexion échouée", Toast.LENGTH_SHORT).show();
                                     }
                                 });
+                        saveData();
                     } else {
                         loginPassword.setError("Champs vides interdits");
                     }
@@ -80,5 +92,32 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, SignInActivity.class));
             }
         });
+    }
+
+    private void saveData() {
+        String pseudo = loginPseudo.getText().toString();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("title", pseudo);
+        editor.apply();
+
+        DataClassUser userClass = new DataClassUser();
+
+        FirebaseDatabase.getInstance().getReference("AeroClubUser").child(pseudo)
+                .setValue(userClass).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(LoginActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(LoginActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

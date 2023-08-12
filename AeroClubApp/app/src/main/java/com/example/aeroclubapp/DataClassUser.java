@@ -2,21 +2,21 @@ package com.example.aeroclubapp;
 
 public class DataClassUser {
 
-    private String dataTitle, dataBirth, dataPseudo, dataImage;
+    private String dataName, dataBirth, dataEmail, dataImage;
     private String fuelType, quantity;
 
     private String typeAvion, periode, groupeAcoustique, heureAtterrissage, categorieAvion, surfaceSol;
 
-    public String getDataTitle() {
-        return dataTitle;
+    public String getDataName() {
+        return dataName;
     }
 
     public String getDataBirth() {
         return dataBirth;
     }
 
-    public String getDataPseudo() {
-        return dataPseudo;
+    public String getDataEmail() {
+        return dataEmail;
     }
 
     public String getDataImage() {
@@ -55,11 +55,13 @@ public class DataClassUser {
         return quantity;
     }
 
+    public DataClassUser() {
+    }
 
-    public DataClassUser(String dataTitle, String dataBirth, String dataPseudo, String dataImage) {
-        this.dataTitle = dataTitle;
+    public DataClassUser(String dataName, String dataBirth, String dataEmail, String dataImage) {
+        this.dataName = dataName;
         this.dataBirth = dataBirth;
-        this.dataPseudo = dataPseudo;
+        this.dataEmail = dataEmail;
         this.dataImage = dataImage;
     }
 

@@ -186,6 +186,7 @@ public class StationnementActivity extends AppCompatActivity {
 
     private void saveData() {
         String surfaceSol = lenghtEditText.getText().toString();
+
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String title = sharedPreferences.getString("title", "");
 

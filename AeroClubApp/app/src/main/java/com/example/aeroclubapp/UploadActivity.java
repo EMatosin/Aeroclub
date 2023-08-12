@@ -23,16 +23,20 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class UploadActivity extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
-    EditText uploadName, uploadBirth, uploadPseudo;
+    EditText uploadName, uploadBirth, uploadEmail;
     String imageURL;
     Uri uri;
 
@@ -44,7 +48,7 @@ public class UploadActivity extends AppCompatActivity {
         uploadImage = findViewById(R.id.uploadImage);
         uploadBirth = findViewById(R.id.uploadBirth);
         uploadName = findViewById(R.id.uploadName);
-        uploadPseudo = findViewById(R.id.uploadPseudo);
+        uploadEmail = findViewById(R.id.uploadEmail);
         saveButton = findViewById(R.id.saveButton);
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
@@ -111,33 +115,36 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     public void uploadData(){
-
-        String title = uploadName.getText().toString();
+        String name = uploadName.getText().toString();
         String birth = uploadBirth.getText().toString();
-        String pseudo = uploadPseudo.getText().toString();
-
+        String email = uploadEmail.getText().toString();
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("title", title);
-        editor.apply();
+        String noeud = sharedPreferences.getString("title", "");
 
-        DataClassUser dataClass = new DataClassUser(title, birth, pseudo, imageURL);
+        DataClassUser userClass = new DataClassUser(name, birth, email, imageURL);
 
-        FirebaseDatabase.getInstance().getReference("AeroClubUser").child(title)
-                .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(UploadActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
-                            finish();
-                        }
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(UploadActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+        DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(noeud);
+
+        Map<String, Object> updateData = new HashMap<>();
+        updateData.put("name", userClass.getDataName());
+        updateData.put("birth", userClass.getDataBirth());
+        updateData.put("email", userClass.getDataEmail());
+        updateData.put("imageurl", userClass.getDataImage());
+
+        titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(UploadActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(UploadActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
