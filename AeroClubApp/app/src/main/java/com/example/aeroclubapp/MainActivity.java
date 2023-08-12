@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.basicService) {
                 replaceFragment(new BasicServiceFragment());
             } else if (itemId == R.id.aeroclub) {
-                replaceFragment(new HomeFragment());
+                replaceFragment(new AeroclubFragment());
             } else if (itemId == R.id.library) {
                 replaceFragment(new HomeFragment());
             }
