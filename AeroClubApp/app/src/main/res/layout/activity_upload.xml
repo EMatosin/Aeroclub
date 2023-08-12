@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vos données personelles"
+                android:text="Vos données personnelles"
                 android:textSize="25sp"
                 android:textAlignment="center"
                 android:textColor="@color/blue"/>

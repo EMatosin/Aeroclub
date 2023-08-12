@@ -28,9 +28,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.text.DateFormat;
-import java.util.Calendar;
-
 public class UploadActivity extends AppCompatActivity {
 
     ImageView uploadImage;
@@ -116,8 +113,8 @@ public class UploadActivity extends AppCompatActivity {
     public void uploadData(){
 
         String title = uploadName.getText().toString();
-        String Birth = uploadBirth.getText().toString();
-        String lang = uploadPseudo.getText().toString();
+        String birth = uploadBirth.getText().toString();
+        String pseudo = uploadPseudo.getText().toString();
 
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
@@ -125,7 +122,7 @@ public class UploadActivity extends AppCompatActivity {
         editor.putString("title", title);
         editor.apply();
 
-        DataClassUser dataClass = new DataClassUser(title, Birth, lang, imageURL);
+        DataClassUser dataClass = new DataClassUser(title, birth, pseudo, imageURL);
 
         FirebaseDatabase.getInstance().getReference("AeroClubUser").child(title)
                 .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {

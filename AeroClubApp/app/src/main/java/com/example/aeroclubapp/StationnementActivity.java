@@ -21,98 +21,199 @@ import java.util.Map;
 
 public class StationnementActivity extends AppCompatActivity {
 
-    EditText quantityEditText;
-    Button saveFuelButton;
-    String fuelType;
+    Button buttonTurbine, buttonReacteur, buttonWk, buttonSemaine,
+            buttonBasé, buttonBaséMensuel, buttonAc1, buttonAc2, buttonAc3,
+            buttonAc4, buttonAc5a, buttonAc5b, buttonJour, buttonNuit,
+            buttonCat1, buttonCat2, buttonCat3, saveButton;
+
+    String typeAvion, periode, groupeAcoustique, heureAtterrissage, categorieAvion;
+
+    EditText lenghtEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stationnement);
 
-        quantityEditText = findViewById(R.id.fuelQuantity);
-        saveFuelButton = findViewById(R.id.saveButtonFuel);
+        buttonTurbine = findViewById(R.id.buttonTurbine);
+        buttonReacteur = findViewById(R.id.buttonReacteur);
+        buttonWk = findViewById(R.id.buttonWk);
+        buttonSemaine = findViewById(R.id.buttonSemaine);
+        buttonBasé = findViewById(R.id.buttonBasé);
+        buttonBaséMensuel = findViewById(R.id.buttonBaséMensuel);
+        buttonAc1 = findViewById(R.id.buttonAc1);
+        buttonAc2 = findViewById(R.id.buttonAc2);
+        buttonAc3 = findViewById(R.id.buttonAc3);
+        buttonAc4 = findViewById(R.id.buttonAc4);
+        buttonAc5a = findViewById(R.id.buttonAc5a);
+        buttonAc5b = findViewById(R.id.buttonAc5b);
+        buttonJour = findViewById(R.id.buttonJour);
+        buttonNuit = findViewById(R.id.buttonNuit);
+        lenghtEditText = findViewById(R.id.lenght);
+        buttonCat1 = findViewById(R.id.buttonCat1);
+        buttonCat2 = findViewById(R.id.buttonCat2);
+        buttonCat3 = findViewById(R.id.buttonCat3);
+        saveButton = findViewById(R.id.saveButtonStationnement);
 
-        Button buttonJETA1 = findViewById(R.id.buttonJETA1);
-        Button buttonAVGAS = findViewById(R.id.buttonAVGAS);
-        Button buttonJETA1noTIC = findViewById(R.id.buttonJETA1noTIC);
-        Button buttonAVGASnoTIC = findViewById(R.id.buttonAVGASnoTIC);
 
-        buttonJETA1.setOnClickListener(new View.OnClickListener() {
+        buttonTurbine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fuelType = "JETA1";
-                Toast.makeText(RavitaillementActivity.this, "JETA1 choisi", Toast.LENGTH_SHORT).show();
-
+                typeAvion = "Mono/Bi turbine";
             }
         });
 
-        buttonAVGAS.setOnClickListener(new View.OnClickListener() {
+        buttonReacteur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fuelType = "AVGAS";
-                Toast.makeText(RavitaillementActivity.this, "AVGAS choisi", Toast.LENGTH_SHORT).show();
-
+                typeAvion = "Réacteur mono/multi";
             }
         });
 
-        buttonJETA1noTIC.setOnClickListener(new View.OnClickListener() {
+        buttonWk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fuelType = "JETA1 Sans TIC";
-                Toast.makeText(RavitaillementActivity.this, "JETA1 sans TIC choisi", Toast.LENGTH_SHORT).show();
-
+                periode = "Week-end/JF(non basé)";
             }
         });
 
-        buttonAVGASnoTIC.setOnClickListener(new View.OnClickListener() {
+        buttonSemaine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fuelType = "AVGAS Sans TIC";
-                Toast.makeText(RavitaillementActivity.this, "AVGAS sans TIC choisi", Toast.LENGTH_SHORT).show();
-
+                periode = "Semaine(non basé)";
             }
         });
 
-        saveFuelButton.setOnClickListener(new View.OnClickListener() {
+        buttonBasé.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveFuelData();
+                periode = "Avion basé(mensuel)";
             }
-
         });
+
+        buttonBaséMensuel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                periode = "Avion basé (unité)";
+            }
+        });
+
+        buttonAc1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                groupeAcoustique = "1";
+            }
+        });
+
+        buttonAc2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                groupeAcoustique = "2";
+            }
+        });
+
+        buttonAc3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                groupeAcoustique = "3";
+            }
+        });
+
+        buttonAc4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                groupeAcoustique = "4";
+            }
+        });
+
+        buttonAc5a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                groupeAcoustique = "5a";
+            }
+        });
+
+        buttonAc5b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                groupeAcoustique = "5b";
+            }
+        });
+
+        buttonJour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                heureAtterrissage = "Jour et soir (6h00-22h00)";
+            }
+        });
+
+        buttonNuit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                heureAtterrissage = "Nuit (22h00-6h00)";
+            }
+        });
+
+        buttonCat1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                categorieAvion = "Cat 1";
+            }
+        });
+
+        buttonCat2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                categorieAvion = "Cat 2";
+            }
+        });
+
+        buttonCat3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                categorieAvion = "Cat 3";
+            }
+        });
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveData();
+            }
+        });
+
     }
 
-    public void saveFuelData() {
-        String quantity = quantityEditText.getText().toString();
+    private void saveData() {
+        String surfaceSol = lenghtEditText.getText().toString();
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String title = sharedPreferences.getString("title", "");
-        if (!quantity.isEmpty()) {
 
-            DataClassUser fuelData = new DataClassUser(fuelType, quantity);
+        DataClassUser stationnementData = new DataClassUser(typeAvion, periode, groupeAcoustique, heureAtterrissage, categorieAvion, surfaceSol);
 
-            DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(title);
+        DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(title);
 
-            Map<String, Object> updateData = new HashMap<>();
-            updateData.put("fuelType", fuelData.getFuelType());
-            updateData.put("quantity", fuelData.getQuantity());
+        Map<String, Object> updateData = new HashMap<>();
+        updateData.put("typeAvion", stationnementData.getTypeAvion());
+        updateData.put("periode", stationnementData.getPeriode());
+        updateData.put("groupeAcoustique", stationnementData.getGroupeAcoustique());
+        updateData.put("heureAtterrissage", stationnementData.getHeureAtterrissage());
+        updateData.put("categorieAvion", stationnementData.getCategorieAvion());
+        updateData.put("surfaceSol", stationnementData.getSurfaceSol());
 
-            titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()) {
-                        Toast.makeText(RavitaillementActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
-                        finish();
-                    }
+        titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(StationnementActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(RavitaillementActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(StationnementActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
-
 }
