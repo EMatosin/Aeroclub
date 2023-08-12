@@ -35,7 +35,7 @@ public class UploadActivity extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
-    EditText uploadTopic, uploadDesc, uploadLang;
+    EditText uploadName, uploadBirth, uploadPseudo;
     String imageURL;
     Uri uri;
 
@@ -45,9 +45,9 @@ public class UploadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_upload);
 
         uploadImage = findViewById(R.id.uploadImage);
-        uploadDesc = findViewById(R.id.uploadDesc);
-        uploadTopic = findViewById(R.id.uploadTopic);
-        uploadLang = findViewById(R.id.uploadLang);
+        uploadBirth = findViewById(R.id.uploadBirth);
+        uploadName = findViewById(R.id.uploadName);
+        uploadPseudo = findViewById(R.id.uploadPseudo);
         saveButton = findViewById(R.id.saveButton);
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
@@ -60,7 +60,7 @@ public class UploadActivity extends AppCompatActivity {
                             uri = data.getData();
                             uploadImage.setImageURI(uri);
                         } else {
-                            Toast.makeText(UploadActivity.this, "No Image Selected", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UploadActivity.this, "Pas d'image sélectionné !", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -115,9 +115,9 @@ public class UploadActivity extends AppCompatActivity {
 
     public void uploadData(){
 
-        String title = uploadTopic.getText().toString();
-        String desc = uploadDesc.getText().toString();
-        String lang = uploadLang.getText().toString();
+        String title = uploadName.getText().toString();
+        String Birth = uploadBirth.getText().toString();
+        String lang = uploadPseudo.getText().toString();
 
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
@@ -125,14 +125,14 @@ public class UploadActivity extends AppCompatActivity {
         editor.putString("title", title);
         editor.apply();
 
-        DataClassUser dataClass = new DataClassUser(title, desc, lang, imageURL);
+        DataClassUser dataClass = new DataClassUser(title, Birth, lang, imageURL);
 
         FirebaseDatabase.getInstance().getReference("AeroClubUser").child(title)
                 .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(UploadActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UploadActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
                             finish();
                         }
                     }

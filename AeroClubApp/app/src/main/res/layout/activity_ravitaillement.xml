@@ -13,9 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Choisissez le type de produit pétrolier"
+        android:background="@drawable/blue_frame"
+        android:padding="16dp"
         android:layout_gravity="center"
         android:textSize="20sp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:layout_marginBottom="32dp"/>
 
     <Button

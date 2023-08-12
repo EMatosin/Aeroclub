@@ -1,19 +1,455 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingTop="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".StationnementActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".StationnementActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stationnement"
-        android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quel type d'avion comptez vous faire atterir ?"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
 
-</LinearLayout>
+            <Button
+                android:id="@+id/buttonTurbine"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:text="Mono/Bi turbine"
+                android:textSize="14dp"
+                android:layout_weight="1"/>
 
+            <Button
+                android:id="@+id/buttonReacteur"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+                android:text="Réacteur mono/multi"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Durant quelle période ?"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonWk"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_gravity="center"
+                android:text="Week-end/JF(non basé)"
+                android:textSize="14dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonSemaine"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/blue"
+                android:layout_gravity="center"
+                android:textSize="14dp"
+                android:text="Semaine(non basé)"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonBasé"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:text="Avion basé(mensuel)"
+                android:textSize="14dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonBaséMensuel"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/blue"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                android:text="Avion basé (unité) "
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A quelle groupe acoustique appartient votre avion ?"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonAc1"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:text="1"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonAc2"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/blue"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                android:text="2"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonAc3"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:text="3"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonAc4"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:text="4"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonAc5a"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                android:text="5a"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonAc5b"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:text="5b"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A quelle heure comptez vous atterir ?"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonJour"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:text="Jour et soir (6h00-22h00)"
+                android:textSize="14dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonNuit"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/blue"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:text="Nuit (22h00-6h00)"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dans le cas d'un stationnement extérieur, combien de m² de surface au sol et par semaine comptez vous utiliser ?"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lenght"
+            android:background="@drawable/custom_edittext"
+            android:padding="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Précisez ici le nombre de m² souhaité"
+            android:textColorHint="@android:color/darker_gray"
+            android:layout_marginTop="32dp"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quel tarif souhaitez vous prendre dans le cas d'un stationnement sous abro ?"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonJETA1noTIC"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="40dp"
+            android:text="Tarif mensuel aéronefs basés"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonJETA1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Tarif journalier aéronefs basés"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAVGASnoTIC"
+            android:text="Tarif journalier aéronefs non-basés"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAVGAS"
+            android:text="Pas intéressé"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dans le cas d'un stationnement sous abri, à quelle catégorie appartient votre avion ?"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonCat1"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:text="Cat 1"
+                android:textSize="15dp"
+                android:backgroundTint="@color/blue"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonCat2"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:textSize="15dp"
+                android:text="Cat 2"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonCat3"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:text="Cat 3"
+                android:textSize="15dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Enregistrer"
+            android:id="@+id/saveButtonFuel"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="18sp"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="50dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

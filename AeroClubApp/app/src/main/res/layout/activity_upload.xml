@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/login_background"
     tools:context=".UploadActivity">
 
     <androidx.cardview.widget.CardView
@@ -28,57 +29,64 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Upload Data"
-                android:textSize="30sp"
+                android:text="Vos données personelles"
+                android:textSize="25sp"
                 android:textAlignment="center"
                 android:textColor="@color/blue"/>
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/uploadimg"
+                android:src="@drawable/idcard"
                 android:id="@+id/uploadImage"
                 android:layout_marginTop="10dp"
                 android:scaleType="fitXY"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/uploadTopic"
-                android:background="@drawable/custom_edittext"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Enter topic name"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/blue"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ajoutez votre carte d'identité"/>
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:id="@+id/uploadDesc"
+                android:layout_height="60dp"
+                android:id="@+id/uploadName"
                 android:background="@drawable/custom_edittext"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Enter description"
+                android:hint="Entrez votre nom"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/blue"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/uploadLang"
+                android:id="@+id/uploadBirth"
                 android:background="@drawable/custom_edittext"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Enter language"
+                android:hint="Entrez votre date de naissance"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/blue"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/uploadPseudo"
+                android:background="@drawable/custom_edittext"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Entrez votre pseudonyme"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/blue"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Save"
+                android:text="Enregistrer"
                 android:textColor="@color/white"
+                android:backgroundTint="@color/blue"
                 android:id="@+id/saveButton"
                 android:textSize="18sp"
                 android:layout_marginTop="20dp"

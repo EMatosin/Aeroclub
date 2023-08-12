@@ -42,6 +42,8 @@ public class RavitaillementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 fuelType = "JETA1";
+                Toast.makeText(RavitaillementActivity.this, "JETA1 choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -49,6 +51,8 @@ public class RavitaillementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 fuelType = "AVGAS";
+                Toast.makeText(RavitaillementActivity.this, "AVGAS choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -56,6 +60,8 @@ public class RavitaillementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 fuelType = "JETA1 Sans TIC";
+                Toast.makeText(RavitaillementActivity.this, "JETA1 sans TIC choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -63,6 +69,8 @@ public class RavitaillementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 fuelType = "AVGAS Sans TIC";
+                Toast.makeText(RavitaillementActivity.this, "AVGAS sans TIC choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -71,6 +79,7 @@ public class RavitaillementActivity extends AppCompatActivity {
             public void onClick(View view) {
                 saveFuelData();
             }
+
         });
     }
 
@@ -92,7 +101,7 @@ public class RavitaillementActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(RavitaillementActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RavitaillementActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
                         finish();
                     }
                 }

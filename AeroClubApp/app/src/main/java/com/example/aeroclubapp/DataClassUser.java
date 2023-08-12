@@ -3,8 +3,8 @@ package com.example.aeroclubapp;
 public class DataClassUser {
 
     private String dataTitle;
-    private String dataDesc;
-    private String dataLang;
+    private String dataBirth;
+    private String dataPseudo;
     private String dataImage;
     private String fuelType;
     private String quantity;
@@ -22,22 +22,22 @@ public class DataClassUser {
         return dataTitle;
     }
 
-    public String getDataDesc() {
-        return dataDesc;
+    public String getDataBirth() {
+        return dataBirth;
     }
 
-    public String getDataLang() {
-        return dataLang;
+    public String getDataPseudo() {
+        return dataPseudo;
     }
 
     public String getDataImage() {
         return dataImage;
     }
 
-    public DataClassUser(String dataTitle, String dataDesc, String dataLang, String dataImage) {
+    public DataClassUser(String dataTitle, String dataBirth, String dataPseudo, String dataImage) {
         this.dataTitle = dataTitle;
-        this.dataDesc = dataDesc;
-        this.dataLang = dataLang;
+        this.dataBirth = dataBirth;
+        this.dataPseudo = dataPseudo;
         this.dataImage = dataImage;
     }
 
