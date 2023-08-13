@@ -4,8 +4,9 @@ public class DataClassUser {
 
     private String dataName, dataBirth, dataEmail, dataImage;
     private String fuelType, quantity;
-
     private String typeAvion, periode, groupeAcoustique, heureAtterrissage, categorieAvion, surfaceSol;
+
+    private String umlDate;
 
     public String getDataName() {
         return dataName;
@@ -55,6 +56,10 @@ public class DataClassUser {
         return quantity;
     }
 
+    public String getUmlDate() {
+        return umlDate;
+    }
+
     public DataClassUser() {
     }
 
@@ -77,5 +82,9 @@ public class DataClassUser {
         this.heureAtterrissage = heureAtterrissage;
         this.categorieAvion = categorieAvion;
         this.surfaceSol = surfaceSol;
+    }
+
+    public DataClassUser(String umlDate) {
+        this.umlDate = umlDate;
     }
 }
