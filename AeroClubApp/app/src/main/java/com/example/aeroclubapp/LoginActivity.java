@@ -109,7 +109,6 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(LoginActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
                             finish();
                         }
                     }

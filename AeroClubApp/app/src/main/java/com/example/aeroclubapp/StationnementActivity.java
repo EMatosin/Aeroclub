@@ -60,6 +60,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 typeAvion = "Mono/Bi turbine";
+                Toast.makeText(StationnementActivity.this, "Mono/Bi turbine choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -67,6 +69,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 typeAvion = "Réacteur mono/multi";
+                Toast.makeText(StationnementActivity.this, "Réacteur mono/multi choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -74,6 +78,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 periode = "Week-end/JF(non basé)";
+                Toast.makeText(StationnementActivity.this, "Week-end/JF(non basé) choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -81,6 +87,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 periode = "Semaine(non basé)";
+                Toast.makeText(StationnementActivity.this, "Semaine(non basé) choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -88,6 +96,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 periode = "Avion basé(mensuel)";
+                Toast.makeText(StationnementActivity.this, "Avion basé(mensuel) choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -95,6 +105,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 periode = "Avion basé (unité)";
+                Toast.makeText(StationnementActivity.this, "Avion basé (unité) choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -102,6 +114,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 groupeAcoustique = "1";
+                Toast.makeText(StationnementActivity.this, "1 choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -109,6 +123,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 groupeAcoustique = "2";
+                Toast.makeText(StationnementActivity.this, "2 choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -116,6 +132,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 groupeAcoustique = "3";
+                Toast.makeText(StationnementActivity.this, "3 choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -123,6 +141,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 groupeAcoustique = "4";
+                Toast.makeText(StationnementActivity.this, "4 choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -130,6 +150,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 groupeAcoustique = "5a";
+                Toast.makeText(StationnementActivity.this, "5a choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -137,6 +159,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 groupeAcoustique = "5b";
+                Toast.makeText(StationnementActivity.this, "5b choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -144,6 +168,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 heureAtterrissage = "Jour et soir (6h00-22h00)";
+                Toast.makeText(StationnementActivity.this, "Jour et soir (6h00-22h00) choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -151,6 +177,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 heureAtterrissage = "Nuit (22h00-6h00)";
+                Toast.makeText(StationnementActivity.this, "Nuit (22h00-6h00) choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -158,6 +186,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 categorieAvion = "Cat 1";
+                Toast.makeText(StationnementActivity.this, "Cat 1 choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -165,6 +195,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 categorieAvion = "Cat 2";
+                Toast.makeText(StationnementActivity.this, "Cat 2 choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -172,6 +204,8 @@ public class StationnementActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 categorieAvion = "Cat 3";
+                Toast.makeText(StationnementActivity.this, "Cat 3 choisi", Toast.LENGTH_SHORT).show();
+
             }
         });
 

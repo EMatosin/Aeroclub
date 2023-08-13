@@ -32,7 +32,7 @@ public class AeroclubFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         int[] imageList = {R.drawable.parachutisme, R.drawable.ulm, R.drawable.bapteme, R.drawable.lecon};
-        int[] descList = {R.string.stationnement, R.string.ravitaillement, R.string.nettoyage, R.string.meteo};
+        int[] descList = {R.string.parachutisme, R.string.ulm, R.string.bapteme, R.string.pilotage};
         String[] nameList = {"Parachutisme", "ULM", "Baptêmes de l'air", "Leçons de pilotage"};
 
         for (int i = 0; i < imageList.length; i++) {

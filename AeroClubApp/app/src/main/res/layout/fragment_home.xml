@@ -52,7 +52,7 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:padding="10dp"
-        android:text="Le paiement des services ainsi que des activités de l'AéroClub se fera sur place mais nous pourrons vous fournir un devis à l'adresse mail renseigné dans la partie ci dessus\n Bonne visite !"
+        android:text="Le paiement des services ainsi que des activités de l'AéroClub se fera sur place mais nous pourrons vous fournir un devis à l'adresse mail renseignée dans vos informations personnelles\n Bonne visite !"
         android:textStyle="italic"
         android:textAlignment="center"
         android:textSize="18dp"

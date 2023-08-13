@@ -4,123 +4,67 @@
     <string name="close_nav">Close Navigation Drawer</string>
 
 
-    //stationnement
-    <string name="curryIngredients">1 gros oignon
-        \n1 cuillère(s) à soupe d huile
-        \n4 pincées de sucre
-        \n4 pincées de gingembre en poudre
-        \n4 pincées de curry en poudre
-        \n12 dl de coulis de tomate
-        \n1 dl de ketchup (épicé ou non)
-        \n1/2 cuillère(s) à café de concentré de tomate
-        \n4 saucisses de francfort
-        \nhuile de friture
-        \nsel et poivre</string>
-    <string name="curryDesc">Faites blondir 1 gros oignon émincé dans 1 cuil. à soupe d’huile.
-        \n\nAjoutez 4 pincées de sucre, 4 pincées de gingembre en poudre, 4 pincées de curry en poudre, sel et poivre. Versez 12 dl de coulis de tomate, 1 dl de ketchup (épicé ou non), 1/2 cuil. à café de concentré de tomate. Laissez mijoter 10 mn jusqu’à obtention d’une sauce épaisse et parfumée. Mixez-la.
-        \n\nPlongez dans la friture 4 saucisses de Francfort et servez-les découpées en morceaux avec la sauce.
-        \n\nParsemez de curry en poudre et servez avec des frites.</string>
+    //parachutisme
+    <string name="parachutisme">
+        \nVivez l ultime sensation de liberté en expérimentant notre service de parachutisme extrême.
+        \nNotre équipe de professionnels chevronnés vous guidera à travers une expérience inoubliable de chute libre. Que vous soyez novice ou parachutiste expérimenté, nous offrons des options adaptées à tous les niveaux d habileté.
+
+        \n\nForfait Découverte - Tandem Enthousiaste
+
+        \n\nDurée: Environ 3 heures (formation préalable et saut)
+        \nDescription: Dans ce forfait, vous serez attaché à un instructeur expérimenté pour un saut en tandem. Vous aurez une brève séance de formation pour vous familiariser avec les procédures de sécurité et les mouvements pendant la chute libre.
+        \nTarif: 250 €
+        \n\nForfait Aventure - Saut en Solo Assisté
+
+        \n\nDurée: Environ 6 heures (formation préalable, saut et débriefing)
+        \nDescription: Pour ceux qui aspirent à un niveau d indépendance, ce forfait offre une formation approfondie en chute libre et en déploiement du parachute. Vous réaliserez un saut en solo, mais avec un parachute équipé d un système de déclenchement automatique en cas de besoin.
+        \nTarif: 400 € (comprenant une formation étendue)
+        \n\nForfait Expert - Formation au Parachutisme
+
+        \n\nDurée: Programme sur plusieurs jours (formation complète, plusieurs sauts en solo, séances théoriques)
+        \nDescription: Pour les passionnés qui souhaitent maîtriser l art du parachutisme, notre forfait Expert offre une formation complète. Vous apprendrez à gérer chaque aspect de la chute libre, de l altitude à la navigation, en passant par le contrôle de la trajectoire.
+        \nTarif: 1200 € (comprenant la formation approfondie et plusieurs sauts en solo)
+        \n\nOptions Supplémentaires
+
+        \n\nVidéo du Saut: Capturez vos moments mémorables grâce à une vidéo professionnelle de votre saut. Tarif: 75 €
+        \nPhotos Haute Résolution: Des photographies saisissantes prises par un photographe professionnel tout au long de votre expérience. Tarif: 50 €
+        \n\nVeuillez noter que les tarifs et les descriptions sont sujets à changement et peuvent varier en fonction de la localisation, des conditions météorologiques et d autres facteurs. La sécurité de nos clients est notre priorité absolue, et notre équipe garantit le respect des normes de sécurité les plus strictes pour vous offrir une expérience de parachutisme inoubliable.</string>
 
 
-    //wagyu
-    <string name="wagyuIngredients">800 g de basse côte de boeuf Wagyu
-        \n2 l de bouillon de pot-au-feu\n100 g de racine de gingembre frais
-        \n15 cl de sauce soja\n2 gousses d ail\nquelques grains de poivre noir
-        \nfleur de sel</string>
-    <string name="wagyuDesc">Mélangez le bouillon de bœuf avec la sauce soja, ajoutez les gousses d’ail pelées et écrasées, le gingembre non pelé et émincé finement à la mandoline.
-        \n\nFaites frémir le bouillon pendant 15 mn à couvert.
-        \n\nDéposez le morceau de basse côte et laissez-le cuire à petit feu et à couvert pendant 2 h (le liquide ne doit surtout pas bouillir, cela risquerait de durcir la viande).
-        \n\nServez la viande et son bouillon préalablement filtré dans des bols individuels avec un peu de fleur de sel et un tour de moulin à poivre.</string>
+    //ulm
+    <string name="ulm">Nous mettons à votre disposition une flotte diversifiée d avions pour répondre à vos besoins, que ce soit pour l instruction au pilotage ou pour des voyages aériens. Voici les avions disponibles, leurs tarifs et leurs utilisations :
+
+        \n\n1. Robin DR 400 120cv (F-GDES)
+
+        \n\nTarif pour Vol en Solo : 161,60 €/heure
+        \nTarif pour Vol avec Instruction : 161,60 €/heure
+        \nUtilisation : Principalement destiné aux activités de formation et d apprentissage.
+        \n\n2. PIPER PA 28 180cv (F-GIDI)
+
+        \n\nTarif pour Vol en Solo : 195 €/heure
+        \nTarif pour Vol avec Instruction : 195 €/heure
+        \nUtilisation : Idéal pour les voyages aériens et les explorations.
+        \n\nPériode d ouverture
+
+        \nOuverture quotidienne : Du 15 avril au 15 octobre
+        \nOuverture hors saison : Les samedis, dimanches et jours fériés
+        \n\nNous vous offrons une flexibilité exceptionnelle pour planifier vos aventures aériennes. Que vous soyez en quête d apprentissage ou que vous souhaitiez explorer le ciel, notre équipe est là pour vous accompagner. Veuillez noter que les tarifs et les horaires peuvent être sujets à des ajustements. N hésitez pas à nous contacter pour plus d informations ou pour réserver votre expérience aérienne.</string>
 
 
-    //camembert
-    <string name="camembertIngredients">1 camembert au lait cru pas trop fait
-        \n12 petites pommes de terre à chair ferme (type pompadour)
-        \n1 branche de romarin\ngros sel</string>
-    <string name="camembertDesc">Préchauffez le four sur th. 6/180°.
-        \n\nLavez les pommes de terre, essuyez-les et coupez-les en deux.
-        \n\nRangez-les sur une plaque de four, parsemez de gros sel et de romarin émietté. Mettez au four pendant 45 mn. Les pommes de terre doivent être gonflées et dorées, au besoin allongez le temps de cuisson de 10 à 15 mn.
-        \n\nSortez-les et placez le four sur la position grill. Retirez le papier qui entoure le camembert, remettez le fromage dans sa boîte sans le couvercle et placez-le sous le grill 4 à 5 mn,le temps qu’il fonde à l’intérieur et grille à l’extérieur.
-        \n\nServez le camembert avec des cuillères, accompagné des demi-pommes de terre soufflées.</string>
+
+    //baptèmes de l air
+    <string name="bapteme">Commencez par un vol d initiation
+        \nSans engagement de votre part, testez une première leçon théorique suivie d un vol d environ 30 min avec un instructeur en étant vous-même aux commandes
+        \nVous décidez ensuite de poursuivre ou non votre formation.. Coût 150€</string>
 
 
-    //anguille
-    <string name="anguilleIngredients">100 g de betterave crue
-        \n40 g de filet d anguille fumée
-        \n20 g de noisettes
-        \n4 cuillère(s) à soupe d huile de noisette
-        \npoivre du moulin
-        \n2 branches de cerfeuil</string>
-    <string name="anguilleDesc">Lavez, séchez et ciselez le cerfeuil.
-        \n\nConcassez grossièrement les noisettes et faites-les torréfier à sec dans une poêle chaude.
-        \n\nEpluchez la betterave. A l’aide d’une mandoline, détaillez-la en fines tranches et déposez-les au fur et à mesure sur quatre assiettes.
-        \n\nDétaillez le filet d’anguille fumée en fines tranches et déposez-les sur les tranches de betterave.
-        \n\nParsemez de noisettes et de cerfeuil, arrosez d’huile de noisette. Salez, poivrez et servez rapidement.</string>
+    //pilotage
+    <string name="pilotage">Des pilotes instructeurs qualidés bénévoles idsponibles
+        \nVous apprendrez le pilotage d un avion de toursime et la navigation aérienne.
+        \n4 instructeurs sont disponibles pour assurer la formation régulière des élèves pilotes et leur perfectionnement.
+        \n\nL aéroclub dispose de deux avions: un triplace école et un quadriplace pour les voyages et le perfectionnement à la navigation</string>
 
 
-    //coqauvin
-    <string name="coqIngredients">1 coq en 8 morceaux
-        \n500 g de champignons de paris
-        \n200 g de lardons
-        \n200 g de petits oignons blancs pelés
-        \n60 g de farine
-        \n2 gousses d ail
-        \npersil ciselé
-        \n1 dl d huile
-        \n100 g de beurre
-        \n2 morceaux de sucre
-        \nla marinade :
-        \n2 l de bon vin rouge
-        \n2 carottes en rondelles
-        \n1 gros oignon émincé
-        \n3 gousses d ail pelées
-        \n3 échalotes émincées
-        \n25 g de cèpes secs
-        \n1 pincée de fleur de thym 1 feuille de laurier
-        \nsel et poivre</string>
-    <string name="coqDesc">Préparez la marinade : dans un grand récipient, mettez les ingrédients de la marinade et le coq. Couvrez et gardez au frais jusqu’au lendemain.
-        \n\nAllumez le four à 200 °C (th. 6 1/2). Egouttez les morceaux de coq et épongez-les. Filtrez la marinade, en réservant la garniture aromatique.
-        \n\nMettez l’huile à chauffer dans une cocotte en fonte. Faites-y dorer la volaille. Ajoutez les légumes de la marinade égouttés, couvrez et laissez étuver 5 mn. Parsemez de farine en remuant et laissez cuire 5 mn. Versez la marinade et, dès l’ébullition, couvrez et glissez 2 h au four.
-        \n\nPréparez la garniture : mettez les petits oignons dans une sauteuse avec 50 g de beurre, le sucre, salez, ajoutez de l’eau à hauteur et couvrez d’un papier sulfurisé. Laissez mijoter : ils doivent être bien brillants. Coupez les champignons en quatre et faites-les sauter dans le reste de beurre. Mettez les lardons à dorer dans une poêle sèche.
-        \n\nEgouttez les morceaux de coq et réservez-les au chaud. Ajoutez le persil et les gousses d’ail écrasées dans la sauce, puis mixez 15 secondes et filtrez cette sauce. Remettez-la dans la cocotte avec les morceaux de coq et laissez réchauffer.
-        \n\nAjoutez oignons, petits lardons et champignons et redonnez une ébullition. Voilà, c’est prêt </string>
-
-
-    //dulce
-    <string name="dulceIngredients">pour 400 g
-        \n1 l de lait entier
-        \n300 g de sucre en poudre
-        \n2 gousses de vanille
-        \n1 pincée de bicarbonate de sodium</string>
-    <string name="dulceDesc">Dans une casserole, portez le lait à ébullition avec le sucre et les
-        gousses de vanille fendues en deux et grattées. Maintenez à frémissement tout en remuant avec
-        une cuillère en bois, afin d’éviter la formation d’une « peau ». Lorsque le lait s’épaissit
-        et prend une couleur de caramel blond, retirez du feu et ôtez les gousses. La confiture de
-        lait est prête lorsqu’elle nappe le dos de la cuillère et se fige au contact d’une surface
-        froide. Ajoutez une pincée de bicarbonate, remuez et conservez au frais.</string>
-
-
-    //falafels
-    <string name="falafelsIngredients">150 g de pois chiches secs
-        \n1 petit oignon
-        \n2 gousses d ail
-        \n1/2 botte de coriandre
-        \n1 cuillère(s) à café bombée de cumin en poudre
-        \n1/4 cuillère(s) à café de piment
-        \n1/2 cuillère(s) à café de sel poivre
-        \nhuile de friture
-        \n\nPour la sauce tahini
-        \n125 g de tahini (pâte de sésame)
-        \n1/2 citron
-        \n5 cl d eau
-        \n1 gousse d ail pressée</string>
-    <string name="falafelsDesc">La veille, faites tremper les pois chiches.
-        \n\nLe jour même, égouttez-les et essuyez-les dans un torchon pour bien enlever l humidité.
-        \n\nPréparez la sauce tahini en mélangeant au fouet tous les ingrédients de la sauce. Goûtez, rectifiez l assaisonnement si besoin.
-        \n\nPréparez la sauce au yaourt en mélangeant les ingrédients de la sauce, goûtez, rectifiez l assaisonnement si besoin.
-        \n\nPréparez les falafels : épluchez et coupez grossièrement l oignon et l ail, passez-les au robot avec les pois chiches, les épices et la coriandre, jusqu à l obtention d une pâte lisse et consistante. Salez, poivrez. Façonnez des boulettes de la taille d une noix en les aplatissant légèrement.
-        \n\nChauffez l huile de friture à 180°C et faites frire les falafels 3 à 4 minutes, jusqu à ce qu ils soient bien dorés. Egouttez-les sur du papier absorbant.
-        \n\nServez les falafels avec les sauces et des crudités.</string>
 
     //stationnement
     <string name="stationnement">

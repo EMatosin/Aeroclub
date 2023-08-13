@@ -23,8 +23,8 @@ public class DetailedAeroclubActivity extends AppCompatActivity {
         Intent intent = this.getIntent();
         if (intent != null){
             String name = intent.getStringExtra("name");
-            int desc = intent.getIntExtra("desc", R.string.ravitaillement);
-            int image = intent.getIntExtra("image", R.drawable.ravitaillement);
+            int desc = intent.getIntExtra("desc", R.string.parachutisme);
+            int image = intent.getIntExtra("image", R.drawable.parachutisme);
             binding2.detailName.setText(name);
             binding2.detailDesc.setText(desc);
             binding2.detailImage.setImageResource(image);
