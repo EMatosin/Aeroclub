@@ -51,7 +51,6 @@
         \n\nNous vous offrons une flexibilité exceptionnelle pour planifier vos aventures aériennes. Que vous soyez en quête d apprentissage ou que vous souhaitiez explorer le ciel, notre équipe est là pour vous accompagner. Veuillez noter que les tarifs et les horaires peuvent être sujets à des ajustements. N hésitez pas à nous contacter pour plus d informations ou pour réserver votre expérience aérienne.</string>
 
 
-
     //baptèmes de l air
     <string name="bapteme">Commencez par un vol d initiation
         \nSans engagement de votre part, testez une première leçon théorique suivie d un vol d environ 30 min avec un instructeur en étant vous-même aux commandes
@@ -64,7 +63,14 @@
         \n4 instructeurs sont disponibles pour assurer la formation régulière des élèves pilotes et leur perfectionnement.
         \n\nL aéroclub dispose de deux avions: un triplace école et un quadriplace pour les voyages et le perfectionnement à la navigation</string>
 
+    //BB
+    <string name="BB">Le Brevet de Base (BB)\nAvoir 15 ans révolus le jour de l épreuve pratique en vol.\nMinimum de 6h en double commande, 4h en solo et 20 atterrissages\nExamen théorique de 1h (60 questions à choix multiples)\nAptitude physique et mentale reconnue par un médecin agréé\nLe BB permet de voler seul à bord dans un rayon de 30 km autour de l aérodrome</string>
 
+    //LAPL
+    <string name="LAPL">Avoir 17 ans révolus pour l épreuve pratique et 16 ans pour le 1* vol solo.\nMinimum de 30h de vol dont 15h en double-commande et 6h en solo comprenant 3h de navigation dont un voyage seul à bord de plus de 145 km\nExamen théorique en 2 épreuves de 120 QCM\nCertificat médical pour LAPL. Electrocardiogramme si plus de 40 ans.\nLe LAPL permet d emmener 3 passagers pour des vols de jour dans toute l Union Européenne, après 10h de vol solo. Qualification vol de nuit possible sur notre terrain.</string>
+
+    //PPL
+    <string name="PPL">Avoir 17 ans révolus pour l épreuve pratique et 16 ans pour le 1e vol solo.\nMinimum de 45 heures de vol dont 25h en double commande et 10heures en solo comprenant 5 heures de navigation dont un voyage seul à bord de plus de 270 km.\nExamen théorique en 2 épreuves de 120 QCM\nCertificat médical de classe 2-électrocardiogramme obligatoire si plus de 40 ans\nLe PPL permet de piloter des avions de plus de 2 tonnes et d emmener des passagers partout dans le monde. Permet de viser les qualifications IFR (vol aux instruments), bimoteur, vol de nuit, hydravion, langue anglaise, voltige, vol en montagne, remorquage de planeurs, largage paras,</string>
 
     //stationnement
     <string name="stationnement">

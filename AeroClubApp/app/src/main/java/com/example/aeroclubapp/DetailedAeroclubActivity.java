@@ -29,9 +29,6 @@ public class DetailedAeroclubActivity extends AppCompatActivity {
             binding2.detailDesc.setText(desc);
             binding2.detailImage.setImageResource(image);
 
-            Log.d("DetailedAeroclubActivity", "Value of name: " + name);
-
-
             continueButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -39,6 +36,12 @@ public class DetailedAeroclubActivity extends AppCompatActivity {
 
                     if ("ULM".equals(name)){
                         interfaceActivityIntent = new Intent(DetailedAeroclubActivity.this, ULMActivity.class);
+                    } else if ("Parachutisme".equals(name)) {
+                        interfaceActivityIntent = new Intent(DetailedAeroclubActivity.this, ParachutismeActivity.class);
+                    } else if ("Baptêmes de l'air".equals(name)) {
+                        interfaceActivityIntent = new Intent(DetailedAeroclubActivity.this, BaptemeActivity.class);
+                    } else if ("Leçons de pilotage".equals(name)) {
+                        interfaceActivityIntent = new Intent(DetailedAeroclubActivity.this, PilotageActivity.class);
                     }
 
                     startActivity(interfaceActivityIntent);

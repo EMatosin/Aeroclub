@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="40dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@android:color/white"
+            tools:context=".PilotageActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choisissez le brevet qui vous intéresse"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_frame"
+                android:padding="16dp"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                android:layout_marginBottom="30dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonBB"
+                android:text="Brevet de base (BB) "
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/BB"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/blue"
+                android:layout_marginBottom="30dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonLAPL"
+                android:text="Licence pilote d'avion léger (LAPL)"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LAPL"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/blue"
+                android:layout_marginBottom="30dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonPPL"
+                android:text="Brevet de pilote privé (PPL)"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PPL"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textColor="@color/blue"
+                android:layout_marginBottom="30dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Enregistrer"
+                android:id="@+id/saveLicence"
+                android:textSize="18sp"
+                android:backgroundTint="@color/blue"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+</ScrollView>
