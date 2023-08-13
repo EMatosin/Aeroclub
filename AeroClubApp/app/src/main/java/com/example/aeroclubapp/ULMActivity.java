@@ -4,6 +4,8 @@ package com.example.aeroclubapp;
 import android.content.SharedPreferences;
 import android.icu.util.Calendar;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -28,6 +30,10 @@ public class ULMActivity extends AppCompatActivity {
 
     private CalendarView calendarView;
 
+    private Button saveButton;
+
+    private String selectedDate;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +44,10 @@ public class ULMActivity extends AppCompatActivity {
 
         calendarView.setWeekDayTextAppearance(R.style.CalendarTextAppearance);
 
+        saveButton = findViewById(R.id.saveButtonULM);
+
         calendarView.setMinDate(System.currentTimeMillis() - 1000);
 
-        // Définir la date de début (15 avril) et de fin (15 octobre) en millisecondes
         Calendar startDateCalendar = Calendar.getInstance();
         startDateCalendar.set(Calendar.YEAR, 2023);
         startDateCalendar.set(Calendar.MONTH, Calendar.APRIL);
@@ -66,7 +73,6 @@ public class ULMActivity extends AppCompatActivity {
                 int selectedYear = selectedCalendar.get(Calendar.YEAR);
                 int selectedMonth = selectedCalendar.get(Calendar.MONTH) + 1;
                 int selectedDay = selectedCalendar.get(Calendar.DAY_OF_MONTH);
-                String selectedDate = selectedDay + "/" + selectedMonth + "/" + selectedYear;
 
                 long selectedDateMillis = selectedCalendar.getTimeInMillis();
 
@@ -75,12 +81,21 @@ public class ULMActivity extends AppCompatActivity {
                         selectedCalendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY;
 
                 if (isWithinOpeningPeriod || isWeekend) {
-                    checkAndSaveDate(selectedDate);
+                    selectedDate = selectedDay + "/" + selectedMonth + "/" + selectedYear;
+
 
                 } else {
                     Toast.makeText(ULMActivity.this, "Date en dehors des créneaux", Toast.LENGTH_SHORT).show();
                 }
             }
+        });
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAndSaveDate(selectedDate);
+            }
+
         });
 
 
