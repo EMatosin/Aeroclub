@@ -43,7 +43,7 @@ public class ULMActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ulmactivity);
+        setContentView(R.layout.activity_ulm);
 
         calendarView = findViewById(R.id.calendarView);
 
