@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.aeroclubapp.databinding.ActivityMainBinding;
@@ -32,8 +33,9 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new BasicServiceFragment());
             } else if (itemId == R.id.aeroclub) {
                 replaceFragment(new AeroclubFragment());
-            } else if (itemId == R.id.library) {
-                replaceFragment(new HomeFragment());
+            } else if (itemId == R.id.commandes) {
+                Intent panierActivity = new Intent(getApplicationContext(),PanierActivity.class);
+                startActivity(panierActivity);
             }
             return true;
         });

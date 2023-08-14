@@ -163,7 +163,5 @@
 
     //meteo
     <string name="meteo">
-        \nLa météo à checker sur Internet</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+        \nCheck la météo sur Internet gros iench</string>
 </resources>

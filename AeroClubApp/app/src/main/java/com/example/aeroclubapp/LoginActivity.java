@@ -64,7 +64,6 @@ public class LoginActivity extends AppCompatActivity {
                                     public void onSuccess(AuthResult authResult) {
                                         Toast.makeText(LoginActivity.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
                                         Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class);
-                                        mainActivity.putExtra("username", email);
                                         startActivity(mainActivity);
                                         finish();
                                     }
