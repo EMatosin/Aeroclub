@@ -7,27 +7,27 @@
     //parachutisme
     <string name="parachutisme">
         \nVivez l ultime sensation de liberté en expérimentant notre service de parachutisme extrême.
-        \nNotre équipe de professionnels chevronnés vous guidera à travers une expérience inoubliable de chute libre. Que vous soyez novice ou parachutiste expérimenté, nous offrons des options adaptées à tous les niveaux d habileté.
+        \n\nNotre équipe de professionnels chevronnés vous guidera à travers une expérience inoubliable de chute libre. Que vous soyez novice ou parachutiste expérimenté, nous offrons des options adaptées à tous les niveaux d habileté.
 
         \n\nForfait Découverte - Tandem Enthousiaste
 
-        \n\nDurée: Environ 3 heures (formation préalable et saut)
-        \nDescription: Dans ce forfait, vous serez attaché à un instructeur expérimenté pour un saut en tandem. Vous aurez une brève séance de formation pour vous familiariser avec les procédures de sécurité et les mouvements pendant la chute libre.
-        \nTarif: 250 €
+        \n\nDurée: \nEnviron 3 heures (formation préalable et saut)
+        \nDescription: \nDans ce forfait, vous serez attaché à un instructeur expérimenté pour un saut en tandem. Vous aurez une brève séance de formation pour vous familiariser avec les procédures de sécurité et les mouvements pendant la chute libre.
+        \nTarif: \n250 €
         \n\nForfait Aventure - Saut en Solo Assisté
 
-        \n\nDurée: Environ 6 heures (formation préalable, saut et débriefing)
-        \nDescription: Pour ceux qui aspirent à un niveau d indépendance, ce forfait offre une formation approfondie en chute libre et en déploiement du parachute. Vous réaliserez un saut en solo, mais avec un parachute équipé d un système de déclenchement automatique en cas de besoin.
-        \nTarif: 400 € (comprenant une formation étendue)
+        \n\nDurée: \nEnviron 6 heures (formation préalable, saut et débriefing)
+        \nDescription: \nPour ceux qui aspirent à un niveau d indépendance, ce forfait offre une formation approfondie en chute libre et en déploiement du parachute. Vous réaliserez un saut en solo, mais avec un parachute équipé d un système de déclenchement automatique en cas de besoin.
+        \nTarif: \n400 € (comprenant une formation étendue)
         \n\nForfait Expert - Formation au Parachutisme
 
-        \n\nDurée: Programme sur plusieurs jours (formation complète, plusieurs sauts en solo, séances théoriques)
-        \nDescription: Pour les passionnés qui souhaitent maîtriser l art du parachutisme, notre forfait Expert offre une formation complète. Vous apprendrez à gérer chaque aspect de la chute libre, de l altitude à la navigation, en passant par le contrôle de la trajectoire.
-        \nTarif: 1200 € (comprenant la formation approfondie et plusieurs sauts en solo)
+        \n\nDurée: \nProgramme sur plusieurs jours (formation complète, plusieurs sauts en solo, séances théoriques)
+        \nDescription: \nPour les passionnés qui souhaitent maîtriser l art du parachutisme, notre forfait Expert offre une formation complète. Vous apprendrez à gérer chaque aspect de la chute libre, de l altitude à la navigation, en passant par le contrôle de la trajectoire.
+        \nTarif: \n1200 € (comprenant la formation approfondie et plusieurs sauts en solo)
         \n\nOptions Supplémentaires
 
-        \n\nVidéo du Saut: Capturez vos moments mémorables grâce à une vidéo professionnelle de votre saut. Tarif: 75 €
-        \nPhotos Haute Résolution: Des photographies saisissantes prises par un photographe professionnel tout au long de votre expérience. Tarif: 50 €
+        \n\nVidéo du Saut: \nCapturez vos moments mémorables grâce à une vidéo professionnelle de votre saut. Tarif: 75 €
+        \nPhotos Haute Résolution: \nDes photographies saisissantes prises par un photographe professionnel tout au long de votre expérience. Tarif: 50 €
         \n\nVeuillez noter que les tarifs et les descriptions sont sujets à changement et peuvent varier en fonction de la localisation, des conditions météorologiques et d autres facteurs. La sécurité de nos clients est notre priorité absolue, et notre équipe garantit le respect des normes de sécurité les plus strictes pour vous offrir une expérience de parachutisme inoubliable.</string>
 
 
@@ -58,7 +58,7 @@
 
 
     //pilotage
-    <string name="pilotage">Des pilotes instructeurs qualidés bénévoles idsponibles
+    <string name="pilotage">Des pilotes instructeurs qualités bénévoles disponibles
         \nVous apprendrez le pilotage d un avion de toursime et la navigation aérienne.
         \n4 instructeurs sont disponibles pour assurer la formation régulière des élèves pilotes et leur perfectionnement.
         \n\nL aéroclub dispose de deux avions: un triplace école et un quadriplace pour les voyages et le perfectionnement à la navigation</string>
@@ -75,25 +75,25 @@
     //stationnement
     <string name="stationnement">
         \nRedevance d atterrissage pour avions mono-turbine (non basé) :
-        \n\nWeek-end/Jour férié : 34.50€ Hors Taxes / 6.90€ TVA / 41.40€ TTC
-        \nSemaine : 31.17€ Hors Taxes / 6.23€ TVA / 37.40€ TTC
-        \nAvion basé (mensuel) : 113.00€ Hors Taxes / 22.60€ TVA / 135.60€ TTC
-        \nAvion basé (unité) : 15.25€ Hors Taxes / 3.05€ TVA / 18.30€ TTC
+        \n\nWeek-end/Jour férié : \n34.50€ Hors Taxes / 6.90€ TVA / 41.40€ TTC
+        \nSemaine : \n31.17€ Hors Taxes / 6.23€ TVA / 37.40€ TTC
+        \nAvion basé (mensuel) : \n113.00€ Hors Taxes / 22.60€ TVA / 135.60€ TTC
+        \nAvion basé (unité) : \n15.25€ Hors Taxes / 3.05€ TVA / 18.30€ TTC
         \n\nRedevance d atterrissage pour avions bi-turbine (non basé) :
 
-            \nWeek-end/Jour férié : 41.17€ Hors Taxes / 8.23€ TVA / 49.40€ TTC
-            \nSemaine : 37.17€ Hors Taxes / 7.43€ TVA / 44.60€ TTC
-            \nAvion basé (mensuel) : 120.00€ Hors Taxes / 24.00€ TVA / 144.00€ TTC
-            \nAvion basé (unité) : 18.00€ Hors Taxes / 3.60€ TVA / 21.60€ TTC
+            \n\nWeek-end/Jour férié : \n41.17€ Hors Taxes / 8.23€ TVA / 49.40€ TTC
+            \nSemaine : \n37.17€ Hors Taxes / 7.43€ TVA / 44.60€ TTC
+            \nAvion basé (mensuel) : \n120.00€ Hors Taxes / 24.00€ TVA / 144.00€ TTC
+            \nAvion basé (unité) : \n18.00€ Hors Taxes / 3.60€ TVA / 21.60€ TTC
         \n\nLe tarif de la redevance est ajusté en fonction du groupe acoustique de l aéronef et de l heure d atterrissage. Les coefficients sont les suivants :
 
         \n\nGroupe acoustique :
 
-        \n\nJour et soir (6h00-22h00) : 1 -> coefficient 1.300 ; 2 -> coefficient 1.200 ; 3 -> coefficient 1.150 ; 4 -> coefficient 1.000 ; 5a -> coefficient 0.850 ; 5b -> coefficient 0.700
-            \nNuit (22h00-6h00) : 1 -> coefficient 4.000 ; 2 -> coefficient 1.800 ; 3 -> coefficient 1.725 ; 4 -> coefficient 1.500 ; 5a -> coefficient 1.275 ; 5b -> coefficient 1.050
+        \n\nJour et soir (6h00-22h00) : \n1 -> coefficient 1.300 ; \n2 -> coefficient 1.200 ; \n3 -> coefficient 1.150 ; \n4 -> coefficient 1.000 ; \n5a -> coefficient 0.850 ; \n5b -> coefficient 0.700
+            \n\nNuit (22h00-6h00) : \n1 -> coefficient 4.000 ; \n2 -> coefficient 1.800 ; \n3 -> coefficient 1.725 ; \n4 -> coefficient 1.500 ; \n5a -> coefficient 1.275 ; \n5b -> coefficient 1.050
         \n\nPour les hélicoptères ou ULM non basés, la redevance d atterrissage est réduite de 50% par rapport aux tarifs mentionnés ci-dessus.
 
-        \n\nFrais de dossiers : Une majoration de 31€ (25,83€ HTVA) est appliquée au total de la facture impayée le jour du mouvement pour couvrir les frais de recherches et de dossier.
+        \n\nFrais de dossiers : \nUne majoration de 31€ (25,83€ HTVA) est appliquée au total de la facture impayée le jour du mouvement pour couvrir les frais de recherches et de dossier.
 
         \n\nRedevance de balisage (par unité de 30 minutes) :
 
@@ -107,29 +107,29 @@
             \nTTC : 2.76€
         \n\nRedevance  abris pour les avions basés, en fonction de la surface S (longueur * envergure) et de la masse maximum au décollage M :
 
-        \n\nS &lt; 60m², M &lt; 0.5t : Tarif mensuel HT - 150,00€ / TTC - 180,00€ ; Tarif journalier HT - 5,50€ / TTC - 6,60€ ; Tarif journalier aéronefs non-basés HT - 9,38€ / TTC - 11,25€
-            \n60m² ≤ S &lt; 100m², 0.5 ≤ M &lt; 1t : Tarif mensuel HT - 116.67€ / TTC - 140.00€ ; Tarif journalier HT - 4.33€ / TTC - 5.20€ ; Tarif journalier aéronefs non-basés HT - 7.29€ / TTC - 8.75€
-            \n100m² &lt; S, 1t &lt; M : Tarif mensuel HT - 70.83€ / TTC - 85.00€ ; Tarif journalier HT - 2.63€ / TTC - 3.15€ ; Tarif journalier aéronefs non-basés HT - 4.42€ / TTC - 5.30€</string>
+        \n\nS &lt; 60m², M &lt; 0.5t : \n\nTarif mensuel HT - 150,00€ / TTC - 180,00€ ; \nTarif journalier HT - 5,50€ / TTC - 6,60€ ; \nTarif journalier aéronefs non-basés HT - 9,38€ / TTC - 11,25€
+            \n\n60m² ≤ S &lt; 100m², 0.5 ≤ M &lt; 1t : \n\nTarif mensuel HT - 116.67€ / TTC - 140.00€ ; \nTarif journalier HT - 4.33€ / TTC - 5.20€ ; \nTarif journalier aéronefs non-basés HT - 7.29€ / TTC - 8.75€
+            \n\n100m² &lt; S, 1t &lt; M : \n\nTarif mensuel HT - 70.83€ / TTC - 85.00€ ; \nTarif journalier HT - 2.63€ / TTC - 3.15€ ; \nTarif journalier aéronefs non-basés HT - 4.42€ / TTC - 5.30€</string>
 
     //nettoyage
     <string name="nettoyage">
-        \n\nTaille de l aéronef : Les frais de nettoyage peuvent varier en fonction de la taille de l aéronef, mesurée en termes de longueur et d envergure. Plus l aéronef est grand, plus les frais de nettoyage peuvent être élevés.
+        \n\nTaille de l aéronef : \nLes frais de nettoyage peuvent varier en fonction de la taille de l aéronef, mesurée en termes de longueur et d envergure. Plus l aéronef est grand, plus les frais de nettoyage peuvent être élevés.
 
-        \n\nDurée du stationnement : Si l aéronef reste stationné pendant une période prolongée, les frais de nettoyage pourraient augmenter en raison de l accumulation de saleté et de poussière.
+        \n\nDurée du stationnement : \nSi l aéronef reste stationné pendant une période prolongée, les frais de nettoyage pourraient augmenter en raison de l accumulation de saleté et de poussière.
 
-        \n\nNiveau de saleté : Les frais de nettoyage pourraient être ajustés en fonction du niveau de saleté ou de détérioration de l aéronef. Un avion très sale nécessiterait un nettoyage plus approfondi et donc des frais plus élevés.
+        \n\nNiveau de saleté : \nLes frais de nettoyage pourraient être ajustés en fonction du niveau de saleté ou de détérioration de l aéronef. Un avion très sale nécessiterait un nettoyage plus approfondi et donc des frais plus élevés.
 
-        \n\nType de débris : Si l aéronef a transporté des marchandises ou des matériaux particulièrement salissants, tels que produits chimiques ou produits pétroliers, les frais de nettoyage pourraient être augmentés pour tenir compte du nettoyage spécialisé requis.
+        \n\nType de débris : \nSi l aéronef a transporté des marchandises ou des matériaux particulièrement salissants, tels que produits chimiques ou produits pétroliers, les frais de nettoyage pourraient être augmentés pour tenir compte du nettoyage spécialisé requis.
 
-        \n\nZone de circulation : Les frais de nettoyage peuvent être différents selon les zones d utilisation de l aéroport ou de la piste. Par exemple, des frais supplémentaires pourraient être appliqués si l aéronef a atterri ou décollé dans une zone boueuse.
+        \n\nZone de circulation : \nLes frais de nettoyage peuvent être différents selon les zones d utilisation de l aéroport ou de la piste. Par exemple, des frais supplémentaires pourraient être appliqués si l aéronef a atterri ou décollé dans une zone boueuse.
 
-        \n\nFréquence du nettoyage : Certains propriétaires d aéronefs pourraient bénéficier de réductions sur les frais de nettoyage s ils souscrivent à des programmes d entretien régulier.
+        \n\nFréquence du nettoyage : \nCertains propriétaires d aéronefs pourraient bénéficier de réductions sur les frais de nettoyage s ils souscrivent à des programmes d entretien régulier.
 
-        \n\nForfait nettoyage : Une option pourrait être de proposer différents forfaits de nettoyage, allant du nettoyage de base au nettoyage complet et détaillé, avec des tarifs variables en fonction du niveau de service choisi.
+        \n\nForfait nettoyage : \nUne option pourrait être de proposer différents forfaits de nettoyage, allant du nettoyage de base au nettoyage complet et détaillé, avec des tarifs variables en fonction du niveau de service choisi.
 
-        \n\nAvion basé ou non basé : Les avions basés à l aéroport pourraient bénéficier de tarifs préférentiels pour les frais de nettoyage, tandis que les avions non basés pourraient être soumis à des frais plus élevés en raison de l utilisation occasionnelle des installations de nettoyage.
+        \n\nAvion basé ou non basé : \nLes avions basés à l aéroport pourraient bénéficier de tarifs préférentiels pour les frais de nettoyage, tandis que les avions non basés pourraient être soumis à des frais plus élevés en raison de l utilisation occasionnelle des installations de nettoyage.
 
-        \n\nServices additionnels : Des frais supplémentaires pourraient être facturés pour des services spéciaux tels que le nettoyage des réservoirs de carburant, le nettoyage des toilettes, etc.</string>
+        \n\nServices additionnels : \nDes frais supplémentaires pourraient être facturés pour des services spéciaux tels que le nettoyage des réservoirs de carburant, le nettoyage des toilettes, etc.</string>
 
 
     //ravitaillement
@@ -163,5 +163,5 @@
 
     //meteo
     <string name="meteo">
-        \nCheck la météo sur Internet gros iench</string>
+        \Faire une redirection vers un site Internet maybe?</string>
 </resources>

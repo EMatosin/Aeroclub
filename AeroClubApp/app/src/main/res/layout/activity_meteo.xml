@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Internet mon reuf tu connais?"
+        android:text="Peut être pas nécessaire ?"
         android:layout_gravity="center"/>
 
 

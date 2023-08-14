@@ -35,40 +35,62 @@
                 android:textColor="@color/blue"/>
 
             <ImageView
+                android:id="@+id/uploadImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/idcard"
-                android:id="@+id/uploadImage"
                 android:layout_marginTop="10dp"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/idcard" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Ajoutez votre carte d'identité"/>
+                android:text="Ajoutez votre carte d'identité" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/uploadName"
                 android:background="@drawable/custom_edittext"
+                android:textSize="16dp"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
                 android:hint="Entrez votre nom"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/blue"/>
 
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/uploadBirth"
-                android:background="@drawable/custom_edittext"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Entrez votre date de naissance"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/blue"/>
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/uploadBirth"
+                    android:background="@drawable/custom_edittext"
+                    android:textSize="16dp"
+                    android:padding="16dp"
+                    android:hint="Votre date de naissance"
+                    android:clickable="false"
+                    android:layout_weight="1.5"
+                    android:textColor="@color/blue"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/selectDateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    app:tint="@color/blue"
+                    app:elevation="0dp"
+                    app:borderWidth="1dp"
+                    app:backgroundTint="@color/blue"/>
+
+            </LinearLayout>
 
             <EditText
                 android:layout_width="match_parent"
@@ -77,7 +99,8 @@
                 android:background="@drawable/custom_edittext"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Entrez une adresse email de secours"
+                android:textSize="16dp"
+                android:hint="Entrez une adresse email secondaire"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/blue"/>
 

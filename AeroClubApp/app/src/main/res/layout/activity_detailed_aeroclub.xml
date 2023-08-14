@@ -57,6 +57,9 @@
             android:layout_height="wrap_content"
             android:text="@string/parachutisme"
             android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:textColor="@color/blue"
             android:textSize="16sp"
             android:id="@+id/detailDesc"/>
 

@@ -52,7 +52,12 @@ public class PanierActivity extends AppCompatActivity {
                 String dateBaptemeAir = dataSnapshot.child("date_bapteme_air").getValue(String.class);
                 String typeBrevet = dataSnapshot.child("licenceType").getValue(String.class);
 
-                displayTextView.setText("Mail: " + email);
+
+                if (email != null) {
+                    displayTextView.setText("Mail: " + email);
+                } else {
+                    displayTextView.setText("Aucun email renseigné.");
+                }
 
                 if (nom != null) {
                     displayTextView.setText("Nom: " + nom);
@@ -67,7 +72,7 @@ public class PanierActivity extends AppCompatActivity {
                 }
 
                 if (emailSecond != null) {
-                    displayTextView.setText(displayTextView.getText() + "\n\nEmail secondaire: " + email);
+                    displayTextView.setText(displayTextView.getText() + "\n\nEmail secondaire: " + emailSecond);
                 } else {
                     displayTextView.setText(displayTextView.getText() + "\n\nAucun email secondaire renseigné.");
                 }

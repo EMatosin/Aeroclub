@@ -9,26 +9,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,8 +41,11 @@ public class UploadActivity extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
-    EditText uploadName, uploadBirth, uploadEmail;
+    FloatingActionButton selectDateButton;
+    EditText uploadName, uploadEmail;
+    TextView uploadBirth;
     String imageURL;
+    Integer year, month, day;
     Uri uri;
 
     @Override
@@ -50,6 +58,13 @@ public class UploadActivity extends AppCompatActivity {
         uploadName = findViewById(R.id.uploadName);
         uploadEmail = findViewById(R.id.uploadEmail);
         saveButton = findViewById(R.id.saveButton);
+        selectDateButton = findViewById(R.id.selectDateButton);
+
+        Calendar calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -66,6 +81,13 @@ public class UploadActivity extends AppCompatActivity {
                     }
                 }
         );
+
+        selectDateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
+            }
+        });
 
         uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,9 +106,43 @@ public class UploadActivity extends AppCompatActivity {
         });
     }
 
-    public void saveData(){
+    private void showDatePickerDialog() {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int selectedYear, int monthOfYear, int dayOfMonth) {
+                        // Update the EditText with the selected date in your desired format
+                        String formattedDate = String.format("%02d/%02d/%04d", dayOfMonth, monthOfYear + 1, selectedYear);
+                        uploadBirth.setText(formattedDate);
+                    }
+                },
+                year,
+                month,
+                day
+        );
 
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Android Images")
+        datePickerDialog.show();
+    }
+
+
+    public void saveData() {
+        if (uri == null) {
+            Toast.makeText(this, "Choisissez une image", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String name = uploadName.getText().toString().trim();
+        String birth = uploadBirth.getText().toString().trim();
+        String email = uploadEmail.getText().toString().trim();
+
+        if (name.isEmpty() || birth.isEmpty() || email.isEmpty()) {
+            Toast.makeText(this, "Remplissez toutes les informations", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference()
+                .child("Android Images")
                 .child(uri.getLastPathSegment());
 
         AlertDialog.Builder builder = new AlertDialog.Builder(UploadActivity.this);
@@ -98,7 +154,6 @@ public class UploadActivity extends AppCompatActivity {
         storageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
                 Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
                 while (!uriTask.isComplete());
                 Uri urlImage = uriTask.getResult();
@@ -113,6 +168,7 @@ public class UploadActivity extends AppCompatActivity {
             }
         });
     }
+
 
     public void uploadData(){
         String name = uploadName.getText().toString();
