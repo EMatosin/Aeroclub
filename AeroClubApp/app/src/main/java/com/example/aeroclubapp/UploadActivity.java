@@ -129,7 +129,7 @@ public class UploadActivity extends AppCompatActivity {
         Map<String, Object> updateData = new HashMap<>();
         updateData.put("name", userClass.getDataName());
         updateData.put("birth", userClass.getDataBirth());
-        updateData.put("email", userClass.getDataEmail());
+        updateData.put("email_second", userClass.getDataEmail());
         updateData.put("imageurl", userClass.getDataImage());
 
         titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {

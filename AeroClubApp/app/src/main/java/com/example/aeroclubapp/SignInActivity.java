@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SignInActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
-    private EditText signupEmail, signupPassword;
+    private EditText signupEmail, signupPassword, signupRePassword;
     private Button signupButton;
     private TextView loginRedirectText;
 
@@ -32,6 +32,7 @@ public class SignInActivity extends AppCompatActivity {
         signupEmail = findViewById(R.id.signup_email);
         signupPassword = findViewById(R.id.signup_password);
         signupButton = findViewById(R.id.signup_button);
+        signupRePassword = findViewById(R.id.signup_repassword);
         loginRedirectText = findViewById(R.id.loginRedirectText);
 
         signupButton.setOnClickListener(new View.OnClickListener() {
@@ -39,21 +40,23 @@ public class SignInActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String user = signupEmail.getText().toString().trim();
                 String pass = signupPassword.getText().toString().trim();
+                String rePass = signupRePassword.getText().toString().trim(); // Récupérer le mot de passe de confirmation
 
-                if (user.isEmpty()){
+                if (user.isEmpty()) {
                     signupEmail.setError("L'email ne peut pas être vide");
-                }
-                if (pass.isEmpty()){
+                } else if (pass.isEmpty()) {
                     signupPassword.setError("Le mot de passe ne peut pas être vide");
-                } else{
+                } else if (!pass.equals(rePass)) { // Vérifier si les mots de passe correspondent
+                    signupRePassword.setError("Les mots de passe ne correspondent pas");
+                } else {
                     auth.createUserWithEmailAndPassword(user, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(SignInActivity.this, "Insciption réussie", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignInActivity.this, "Inscription réussie", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(SignInActivity.this, LoginActivity.class));
                             } else {
-                                Toast.makeText(SignInActivity.this, "Inscription échouée" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignInActivity.this, "Inscription échouée: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

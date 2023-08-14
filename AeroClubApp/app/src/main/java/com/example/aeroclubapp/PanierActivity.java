@@ -33,7 +33,8 @@ public class PanierActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String nom = dataSnapshot.child("name").getValue(String.class);
                 String dateNaissance = dataSnapshot.child("birth").getValue(String.class);
-                String email = dataSnapshot.child("email").getValue(String.class);
+                String email = dataSnapshot.child("dataEmail").getValue(String.class);
+                String emailSecond = dataSnapshot.child("email_second").getValue(String.class);
                 String typeAvionAtterissage = dataSnapshot.child("typeAvion").getValue(String.class);
                 String periodeAtterissage = dataSnapshot.child("periode").getValue(String.class);
                 String groupeAcoustique = dataSnapshot.child("groupeAcoustique").getValue(String.class);
@@ -51,6 +52,8 @@ public class PanierActivity extends AppCompatActivity {
                 String dateBaptemeAir = dataSnapshot.child("date_bapteme_air").getValue(String.class);
                 String typeBrevet = dataSnapshot.child("licenceType").getValue(String.class);
 
+                displayTextView.setText("Mail: " + email);
+
                 if (nom != null) {
                     displayTextView.setText("Nom: " + nom);
                 } else {
@@ -63,10 +66,10 @@ public class PanierActivity extends AppCompatActivity {
                     displayTextView.setText(displayTextView.getText() + "\n\nAucune date de naissance renseignée.");
                 }
 
-                if (email != null) {
-                    displayTextView.setText(displayTextView.getText() + "\n\nEmail: " + email);
+                if (emailSecond != null) {
+                    displayTextView.setText(displayTextView.getText() + "\n\nEmail secondaire: " + email);
                 } else {
-                    displayTextView.setText(displayTextView.getText() + "\n\nAucun email renseigné.");
+                    displayTextView.setText(displayTextView.getText() + "\n\nAucun email secondaire renseigné.");
                 }
 
                 if (surfaceStationnement != null) {

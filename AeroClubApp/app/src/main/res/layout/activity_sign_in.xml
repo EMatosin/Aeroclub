@@ -59,10 +59,23 @@
                 android:textColor="@color/black"
                 android:inputType="textPassword"/>
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/signup_repassword"
+                android:background="@drawable/custom_edittext"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                android:hint="Confirmez le mot de passe"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:textColor="@color/black"
+                android:inputType="textPassword"/>
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Inscris toi"
+                android:text="Valider"
                 android:id="@+id/signup_button"
                 android:textSize="18sp"
                 android:layout_marginTop="30dp"
@@ -73,7 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/loginRedirectText"
-                android:text="Déjà inscrit ? Clique ici"
+                android:text="Si vous êtes déjà inscrit cliquez ici"
+                android:gravity="center"
                 android:layout_gravity="center"
                 android:padding="8dp"
                 android:layout_marginTop="10dp"

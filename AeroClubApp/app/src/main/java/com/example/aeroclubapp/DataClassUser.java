@@ -73,6 +73,10 @@ public class DataClassUser {
         return parachutismeDate;
     }
 
+    public void setEmail(String dataEmail) {
+        this.dataEmail = dataEmail;
+    }
+
     public DataClassUser() {
     }
 

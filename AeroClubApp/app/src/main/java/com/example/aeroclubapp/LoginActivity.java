@@ -21,16 +21,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.HashMap;
-import java.util.Map;
 
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText loginEmail, loginPassword, loginPseudo;
+    private EditText loginEmail, loginPassword;
     private TextView signupRedirectText;
     private Button loginButton;
     private FirebaseAuth auth;
@@ -43,7 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
-        loginPseudo = findViewById(R.id.login_pseudo);
         signupRedirectText = findViewById(R.id.signUpRedirectText);
 
         auth = FirebaseAuth.getInstance();
@@ -94,28 +91,36 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void saveData() {
-        String pseudo = loginPseudo.getText().toString();
 
-        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("title", pseudo);
-        editor.apply();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        DataClassUser userClass = new DataClassUser();
+        if (currentUser != null) {
+            String uid = currentUser.getUid();
+            String email = currentUser.getEmail();
 
-        FirebaseDatabase.getInstance().getReference("AeroClubUser").child(pseudo)
-                .setValue(userClass).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
-                            finish();
+            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("title", uid);
+            editor.apply();
+
+            DataClassUser userClass = new DataClassUser();
+            userClass.setEmail(email);
+
+            FirebaseDatabase.getInstance().getReference("AeroClubUser").child(uid)
+                    .setValue(userClass).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                finish();
+                            }
                         }
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(LoginActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(LoginActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        }
     }
 }
