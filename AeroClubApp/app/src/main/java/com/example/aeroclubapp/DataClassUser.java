@@ -6,7 +6,8 @@ public class DataClassUser {
     private String fuelType, quantity;
     private String typeAvion, periode, groupeAcoustique, heureAtterrissage, categorieAvion, surfaceSol;
     private String umlDate;
-    private LicenceClass licenceType;
+
+    private String typeForfait, typeOption, parachutismeDate;
 
     public String getDataName() {
         return dataName;
@@ -59,7 +60,18 @@ public class DataClassUser {
     public String getUmlDate() {
         return umlDate;
     }
-    public LicenceClass getLicenceType() {return licenceType;}
+
+    public String getTypeForfait() {
+        return typeForfait;
+    }
+
+    public String getTypeOption() {
+        return typeOption;
+    }
+
+    public String getParachutismeDate() {
+        return parachutismeDate;
+    }
 
     public DataClassUser() {
     }
@@ -88,7 +100,10 @@ public class DataClassUser {
     public DataClassUser(String umlDate) {
         this.umlDate = umlDate;
     }
-    public DataClassUser(LicenceClass licenceType) {
-        this.licenceType = licenceType;
+
+    public DataClassUser(String typeForfait, String typeOption, String parachutismeDate) {
+        this.typeForfait = typeForfait;
+        this.typeOption = typeOption;
+        this.parachutismeDate = parachutismeDate;
     }
 }

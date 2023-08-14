@@ -198,10 +198,8 @@ public class ULMActivity extends AppCompatActivity {
         datesRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                // Créer une liste pour stocker les dates existantes
                 List<String> existingDates = new ArrayList<>();
 
-                // Parcourir les données existantes et les ajouter à la liste
                 for (DataSnapshot dateSnapshot : dataSnapshot.getChildren()) {
                     String existingDate = dateSnapshot.getValue(String.class);
                     if (existingDate != null) {
@@ -209,10 +207,8 @@ public class ULMActivity extends AppCompatActivity {
                     }
                 }
 
-                // Ajouter la nouvelle date à la liste
                 existingDates.add(selectedDate);
 
-                // Mettre à jour les données dans la base de données avec la liste mise à jour
                 datesRef.setValue(existingDates).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

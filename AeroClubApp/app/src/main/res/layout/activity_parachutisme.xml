@@ -1,9 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ParachutismeActivity">
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".ParachutismeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choisissez le créneau qui vous convient"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/blue"/>
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:dateTextAppearance="@style/CalendarTextAppearance"
+            android:background="@drawable/white_frame"
+            android:firstDayOfWeek="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choisissez le forfait vous intéresse"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:layout_marginBottom="30dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonDecouverte"
+            android:text="Forfait Découverte"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAventure"
+            android:text="Forfait Aventure"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonExpert"
+            android:text="Forfait Expert"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Souhaitez vous une option supplémentaire ?"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/blue"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/buttonVideo"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:text="Vidéo"
+                android:textSize="14dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonPhoto"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/blue"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
+                android:textSize="14dp"
+                android:text="Photos"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attention !\nAprès avoir choisi une date, vous ne pourrez plus l'annuler, mais vous pourrez toujours la modifier en cliquant sur une nouvelle date.\nSi vous souhaitez annuler une réservation, merci de nous contacter par téléphone ou mail afin que nous fassions le nécessaire."
+            android:layout_gravity="center"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/red"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enregistrer"
+            android:id="@+id/saveButtonULM"
+            android:backgroundTint="@color/blue"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+</ScrollView>
