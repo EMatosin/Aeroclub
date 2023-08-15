@@ -59,10 +59,20 @@ public class LoginActivity extends AppCompatActivity {
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
-                                        Toast.makeText(LoginActivity.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
-                                        Intent mainActivity = new Intent(getApplicationContext(),MainActivity.class);
-                                        startActivity(mainActivity);
-                                        finish();
+                                        FirebaseUser currentUser = auth.getCurrentUser();
+                                        if (currentUser != null) {
+                                            String email = currentUser.getEmail();
+                                            if (email.equals("admin@admin.fr")) {
+                                                Toast.makeText(LoginActivity.this, "Connexion réussie en tant qu'administrateur", Toast.LENGTH_SHORT).show();
+                                                Intent adminActivity = new Intent(getApplicationContext(), AdminActivity.class);
+                                                startActivity(adminActivity);
+                                            } else {
+                                                Toast.makeText(LoginActivity.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
+                                                Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                                                startActivity(mainActivity);
+                                            }
+                                            finish();
+                                        }
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override

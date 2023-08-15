@@ -1,6 +1,7 @@
 package com.example.aeroclubapp;
 
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class PanierActivity extends AppCompatActivity {
         DatabaseReference aeroclubUserRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(title);
 
         aeroclubUserRef.addValueEventListener(new ValueEventListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String nom = dataSnapshot.child("name").getValue(String.class);
