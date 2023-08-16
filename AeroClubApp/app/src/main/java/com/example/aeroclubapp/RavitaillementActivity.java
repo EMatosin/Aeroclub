@@ -89,13 +89,12 @@ public class RavitaillementActivity extends AppCompatActivity {
         String title = sharedPreferences.getString("title", "");
         if (!quantity.isEmpty()) {
 
-            DataClassUser fuelData = new DataClassUser(fuelType, quantity);
 
             DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(title);
 
             Map<String, Object> updateData = new HashMap<>();
-            updateData.put("fuelType", fuelData.getFuelType());
-            updateData.put("quantity", fuelData.getQuantity());
+            updateData.put("fuelType", fuelType);
+            updateData.put("quantity", quantity);
 
             titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override

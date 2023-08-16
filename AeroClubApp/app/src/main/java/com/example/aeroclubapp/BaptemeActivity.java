@@ -124,8 +124,8 @@ public class BaptemeActivity extends AppCompatActivity {
                 if (isDateReserved) {
                     Toast.makeText(BaptemeActivity.this, "Cette date est déjà réservée", Toast.LENGTH_SHORT).show();
                 } else {
-                    saveData(selectedDate);
-                    saveDate(selectedDate);
+                    saveData();
+                    saveDate();
                 }
             }
 
@@ -139,16 +139,14 @@ public class BaptemeActivity extends AppCompatActivity {
 
 
 
-    private void saveData(String selectedDate) {
+    private void saveData() {
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String noeud = sharedPreferences.getString("title", "");
-
-        DataClassUser umlClass = new DataClassUser(selectedDate);
 
         DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(noeud);
 
         Map<String, Object> updateData = new HashMap<>();
-        updateData.put("date_bapteme_air", umlClass.getUmlDate());
+        updateData.put("date_bapteme_air", selectedDate);
 
         titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -166,7 +164,7 @@ public class BaptemeActivity extends AppCompatActivity {
         });
     }
 
-    private void saveDate(String selectedDate) {
+    private void saveDate() {
 
         DatabaseReference datesRef = FirebaseDatabase.getInstance().getReference("DatesChoisisULM/robin");
 

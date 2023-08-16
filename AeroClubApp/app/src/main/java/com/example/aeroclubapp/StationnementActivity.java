@@ -224,17 +224,15 @@ public class StationnementActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String title = sharedPreferences.getString("title", "");
 
-        DataClassUser stationnementData = new DataClassUser(typeAvion, periode, groupeAcoustique, heureAtterrissage, categorieAvion, surfaceSol);
-
         DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(title);
 
         Map<String, Object> updateData = new HashMap<>();
-        updateData.put("typeAvion", stationnementData.getTypeAvion());
-        updateData.put("periode", stationnementData.getPeriode());
-        updateData.put("groupeAcoustique", stationnementData.getGroupeAcoustique());
-        updateData.put("heureAtterrissage", stationnementData.getHeureAtterrissage());
-        updateData.put("categorieAvion", stationnementData.getCategorieAvion());
-        updateData.put("surfaceSol", stationnementData.getSurfaceSol());
+        updateData.put("typeAvion", typeAvion);
+        updateData.put("periode", periode);
+        updateData.put("groupeAcoustique", groupeAcoustique);
+        updateData.put("heureAtterrissage", heureAtterrissage);
+        updateData.put("categorieAvion", categorieAvion);
+        updateData.put("surfaceSol", surfaceSol);
 
         titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

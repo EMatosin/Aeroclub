@@ -178,15 +178,13 @@ public class UploadActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String noeud = sharedPreferences.getString("title", "");
 
-        DataClassUser userClass = new DataClassUser(name, birth, email, imageURL);
-
         DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(noeud);
 
         Map<String, Object> updateData = new HashMap<>();
-        updateData.put("name", userClass.getDataName());
-        updateData.put("birth", userClass.getDataBirth());
-        updateData.put("email_second", userClass.getDataEmail());
-        updateData.put("imageurl", userClass.getDataImage());
+        updateData.put("name", name);
+        updateData.put("birth", birth);
+        updateData.put("email_second", email);
+        updateData.put("imageurl", imageURL);
 
         titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

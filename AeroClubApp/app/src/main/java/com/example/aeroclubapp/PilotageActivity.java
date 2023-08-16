@@ -76,12 +76,10 @@ public class PilotageActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String title = sharedPreferences.getString("title", "");
 
-        LicenceClass licenceData = new LicenceClass(licenceType);
-
         DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(title);
 
         Map<String, Object> updateData = new HashMap<>();
-        updateData.put("licenceType", licenceData.getLicenceType());
+        updateData.put("licenceType", licenceType);
 
         titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

@@ -24,6 +24,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -68,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                                                 startActivity(adminActivity);
                                             } else {
                                                 Toast.makeText(LoginActivity.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
+                                                saveData();
                                                 Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
                                                 startActivity(mainActivity);
                                             }
@@ -80,7 +83,6 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this, "Connexion échouée", Toast.LENGTH_SHORT).show();
                                     }
                                 });
-                        saveData();
                     } else {
                         loginPassword.setError("Champs vides interdits");
                     }
@@ -114,11 +116,11 @@ public class LoginActivity extends AppCompatActivity {
             editor.putString("title", uid);
             editor.apply();
 
-            DataClassUser userClass = new DataClassUser();
-            userClass.setEmail(email);
+            Map<String, Object> updateData = new HashMap<>();
+            updateData.put("dataEmail", email);
 
             FirebaseDatabase.getInstance().getReference("AeroClubUser").child(uid)
-                    .setValue(userClass).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    .updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {

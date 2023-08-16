@@ -147,7 +147,7 @@ public class ParachutismeActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveData(selectedDate, selectedForfait, selectedOption);
+                saveData();
             }
 
         });
@@ -155,18 +155,16 @@ public class ParachutismeActivity extends AppCompatActivity {
 
     }
 
-    private void saveData(String selectedDate, String selectedForfait, String selectedOption) {
+    private void saveData() {
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String noeud = sharedPreferences.getString("title", "");
-
-        DataClassUser umlClass = new DataClassUser(selectedForfait, selectedOption, selectedDate);
 
         DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(noeud);
 
         Map<String, Object> updateData = new HashMap<>();
-        updateData.put("date_parachutisme",umlClass.getParachutismeDate());
-        updateData.put("forfait_parachutisme",umlClass.getTypeForfait());
-        updateData.put("option_parachutisme",umlClass.getTypeOption());
+        updateData.put("date_parachutisme",selectedDate);
+        updateData.put("forfait_parachutisme",selectedForfait);
+        updateData.put("option_parachutisme",selectedOption);
 
         titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

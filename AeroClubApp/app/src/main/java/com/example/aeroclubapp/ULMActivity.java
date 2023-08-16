@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -21,6 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -33,7 +35,9 @@ public class ULMActivity extends AppCompatActivity {
 
     private Button saveButton;
 
-    private String selectedDate, selectedULM;
+    private String selectedULM;
+
+    private LocalDateTime selectedDate;
 
     private ImageButton piper;
 
@@ -91,7 +95,7 @@ public class ULMActivity extends AppCompatActivity {
                         selectedCalendar.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY;
 
                 if (isWithinOpeningPeriod || isWeekend) {
-                    selectedDate = selectedDay + "/" + selectedMonth + "/" + selectedYear;
+                    selectedDate = LocalDateTime.of(selectedYear, selectedMonth, selectedDay, 0, 0);
 
 
                 } else {
@@ -121,7 +125,7 @@ public class ULMActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkAndSaveDate(selectedDate, selectedULM);
+                checkAndSaveDate();
             }
 
         });
@@ -129,7 +133,7 @@ public class ULMActivity extends AppCompatActivity {
 
     }
 
-    private void checkAndSaveDate(String selectedDate, String selectedULM) {
+    private void checkAndSaveDate() {
         DatabaseReference reservedDatesRef = FirebaseDatabase.getInstance().getReference("DatesChoisisULM/" + selectedULM);
 
         reservedDatesRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -138,8 +142,9 @@ public class ULMActivity extends AppCompatActivity {
                 boolean isDateReserved = false;
 
                 for (DataSnapshot dateSnapshot : dataSnapshot.getChildren()) {
-                    String reservedDate = dateSnapshot.getValue(String.class);
-
+                    LocalDateTime reservedDate = LocalDateTime.parse(dateSnapshot.getValue(String.class));
+                    // reservedDate.getHour()
+                    // TODO
                     if (reservedDate != null && reservedDate.equals(selectedDate)) {
                         isDateReserved = true;
                         break;
@@ -149,8 +154,8 @@ public class ULMActivity extends AppCompatActivity {
                 if (isDateReserved) {
                     Toast.makeText(ULMActivity.this, "Cette date est déjà réservée pour cet avion", Toast.LENGTH_SHORT).show();
                 } else {
-                    saveData(selectedDate, selectedULM);
-                    saveDate(selectedDate, selectedULM);
+                    saveData();
+                    saveDate();
                 }
             }
 
@@ -164,16 +169,14 @@ public class ULMActivity extends AppCompatActivity {
 
 
 
-    private void saveData(String selectedDate, String selectedULM) {
+    private void saveData() {
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String noeud = sharedPreferences.getString("title", "");
-
-        DataClassUser umlClass = new DataClassUser(selectedDate);
 
         DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(noeud);
 
         Map<String, Object> updateData = new HashMap<>();
-        updateData.put("date_uml_" + selectedULM, umlClass.getUmlDate());
+        updateData.put("date_uml_" + selectedULM, selectedDate.toString());
 
         titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -191,7 +194,7 @@ public class ULMActivity extends AppCompatActivity {
         });
     }
 
-    private void saveDate(String selectedDate, String selectedULM) {
+    private void saveDate() {
 
         DatabaseReference datesRef = FirebaseDatabase.getInstance().getReference("DatesChoisisULM/" + selectedULM);
 
@@ -207,7 +210,7 @@ public class ULMActivity extends AppCompatActivity {
                     }
                 }
 
-                existingDates.add(selectedDate);
+                existingDates.add(selectedDate.toString());
 
                 datesRef.setValue(existingDates).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
