@@ -1,4 +1,4 @@
-package com.example.aeroclubapp;
+package com.example.aeroclubapp.connexion;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aeroclubapp.fragments.MainActivity;
+import com.example.aeroclubapp.R;
+import com.example.aeroclubapp.admin.AdminActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".BasicServiceFragment">
+    tools:context=".fragments.basicservice.BasicServiceFragment">
 
     <ListView
         android:id="@+id/listView"

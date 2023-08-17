@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context=".ULMActivity">
+        tools:context=".activites.ULMActivity">
 
         <TextView
             android:layout_width="wrap_content"

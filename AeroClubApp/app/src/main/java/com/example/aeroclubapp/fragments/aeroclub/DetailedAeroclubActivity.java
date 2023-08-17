@@ -1,13 +1,17 @@
-package com.example.aeroclubapp;
+package com.example.aeroclubapp.fragments.aeroclub;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.aeroclubapp.R;
+import com.example.aeroclubapp.activites.BaptemeActivity;
+import com.example.aeroclubapp.activites.ParachutismeActivity;
+import com.example.aeroclubapp.activites.PilotageActivity;
+import com.example.aeroclubapp.activites.ULMActivity;
 import com.example.aeroclubapp.databinding.ActivityDetailedAeroclubBinding;
 
 public class DetailedAeroclubActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.aeroclubapp;
+package com.example.aeroclubapp.fragments.basicservice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.aeroclubapp.R;
+import com.example.aeroclubapp.basicservices.MeteoActivity;
+import com.example.aeroclubapp.basicservices.NettoyageActivity;
+import com.example.aeroclubapp.basicservices.RavitaillementActivity;
+import com.example.aeroclubapp.basicservices.StationnementActivity;
 import com.example.aeroclubapp.databinding.ActivityDetailedBasicServiceBinding;
 
 public class DetailedBasicServiceActivity extends AppCompatActivity {

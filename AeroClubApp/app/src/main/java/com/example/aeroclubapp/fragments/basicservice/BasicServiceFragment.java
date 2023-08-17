@@ -1,4 +1,4 @@
-package com.example.aeroclubapp;
+package com.example.aeroclubapp.fragments.basicservice;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.aeroclubapp.ListBasicServiceAdapter;
+import com.example.aeroclubapp.ListBasicServiceData;
+import com.example.aeroclubapp.R;
 import com.example.aeroclubapp.databinding.FragmentBasicServiceBinding;
 import java.util.ArrayList;
 

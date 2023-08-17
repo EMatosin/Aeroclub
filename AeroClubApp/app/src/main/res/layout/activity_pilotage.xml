@@ -15,7 +15,7 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:background="@android:color/white"
-            tools:context=".PilotageActivity">
+            tools:context=".activites.PilotageActivity">
 
             <TextView
                 android:layout_width="wrap_content"

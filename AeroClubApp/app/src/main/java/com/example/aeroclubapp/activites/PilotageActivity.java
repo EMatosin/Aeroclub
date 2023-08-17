@@ -1,15 +1,17 @@
-package com.example.aeroclubapp;
+package com.example.aeroclubapp.activites;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.aeroclubapp.R;
+import com.example.aeroclubapp.fragments.aeroclub.DetailedAeroclubActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -67,6 +69,18 @@ public class PilotageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 saveLicenceData();
+                Intent interfaceActivityIntent = null;
+
+                if ("BB".equals(licenceType)){
+                    interfaceActivityIntent = new Intent(PilotageActivity.this, BBActivity.class);
+                } else if ("LAPL".equals(licenceType)) {
+                    interfaceActivityIntent = new Intent(PilotageActivity.this, LAPLActivity.class);
+                } else if ("PPL".equals(licenceType)) {
+                    interfaceActivityIntent = new Intent(PilotageActivity.this, PPLActivity.class);
+                }
+
+                startActivity(interfaceActivityIntent);
+                finish();
             }
 
         });
@@ -86,7 +100,6 @@ public class PilotageActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(PilotageActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
-                    finish();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

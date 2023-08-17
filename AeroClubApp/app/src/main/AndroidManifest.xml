@@ -17,49 +17,58 @@
         android:theme="@style/Theme.AeroClubApp"
         tools:targetApi="31">
         <activity
-            android:name=".AdminActivity"
+            android:name=".activites.PPLActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.LAPLActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activites.BBActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminActivity"
             android:exported="false" />
         <activity
             android:name=".PanierActivity"
             android:exported="false" />
         <activity
-            android:name=".PilotageActivity"
+            android:name=".activites.PilotageActivity"
             android:exported="false" />
         <activity
-            android:name=".BaptemeActivity"
+            android:name=".activites.BaptemeActivity"
             android:exported="false" />
         <activity
-            android:name=".ParachutismeActivity"
+            android:name=".activites.ParachutismeActivity"
             android:exported="false" />
         <activity
-            android:name=".ULMActivity"
+            android:name=".activites.ULMActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailedAeroclubActivity"
+            android:name=".fragments.aeroclub.DetailedAeroclubActivity"
             android:exported="false" />
         <activity
-            android:name=".MeteoActivity"
+            android:name=".basicservices.MeteoActivity"
             android:exported="false" />
         <activity
-            android:name=".NettoyageActivity"
+            android:name=".basicservices.NettoyageActivity"
             android:exported="false" />
         <activity
-            android:name=".StationnementActivity"
+            android:name=".basicservices.StationnementActivity"
             android:exported="false" />
         <activity
-            android:name=".RavitaillementActivity"
+            android:name=".basicservices.RavitaillementActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailedBasicServiceActivity"
+            android:name=".fragments.basicservice.DetailedBasicServiceActivity"
             android:exported="false" />
         <activity
             android:name=".UploadActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".connexion.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".connexion.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +77,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".fragments.MainActivity"
             android:exported="false" />
     </application>
 

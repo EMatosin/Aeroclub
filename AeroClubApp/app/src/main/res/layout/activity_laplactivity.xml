@@ -10,12 +10,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context=".activites.BaptemeActivity">
+        tools:context=".activites.LAPLActivity">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choisissez le créneau qui vous convient"
+            android:text="Choisissez les créneaux qui vous convient (30h minimum)"
             android:layout_gravity="center"
             android:textSize="20dp"
             android:textAlignment="center"
@@ -30,6 +30,7 @@
             android:dateTextAppearance="@style/CalendarTextAppearance"
             android:background="@drawable/white_frame"
             android:firstDayOfWeek="2" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,18 +86,19 @@
             </LinearLayout>
         </LinearLayout>
 
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/robin"/>
+            android:src="@drawable/piper"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Robin DR400/120CV pour baptème de l'air"
+            android:text="Piper PA 28/180CV pour le brevet de base"
             android:textStyle="italic"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"/>
@@ -115,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enregistrer"
-            android:id="@+id/saveButtonBapteme"
+            android:id="@+id/saveButtonULM"
             android:backgroundTint="@color/blue"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"/>
