@@ -4,10 +4,13 @@ package com.example.aeroclubapp;
 import android.content.SharedPreferences;
 import android.icu.util.Calendar;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
+import android.widget.NumberPicker;
+import android.widget.TimePicker;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,11 +40,15 @@ public class ULMActivity extends AppCompatActivity {
 
     private String selectedULM;
 
+    private NumberPicker startNumber, endNumber;
+
     private LocalDateTime selectedDate;
 
-    private ImageButton piper;
+    private ImageButton ulm;
 
-    private ImageButton robin;
+    private ImageButton autogire;
+
+    private Integer heureDebut, heureFin;
 
 
     @Override
@@ -51,13 +58,17 @@ public class ULMActivity extends AppCompatActivity {
 
         calendarView = findViewById(R.id.calendarView);
 
+        startNumber = findViewById(R.id.hourStart);
+
+        endNumber = findViewById(R.id.hourEnd);
+
         calendarView.setWeekDayTextAppearance(R.style.CalendarTextAppearance);
 
         saveButton = findViewById(R.id.saveButtonULM);
 
-        piper=findViewById(R.id.piper);
+        ulm=findViewById(R.id.ulm);
 
-        robin = findViewById(R.id.robin);
+        autogire = findViewById(R.id.autogire);
 
 
         calendarView.setMinDate(System.currentTimeMillis() - 1000);
@@ -78,6 +89,20 @@ public class ULMActivity extends AppCompatActivity {
 
         boolean isOpenOnWeekends = dayOfWeek == Calendar.SATURDAY || dayOfWeek == Calendar.SUNDAY;
 
+        String[] hoursDebut = new String[]{"8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"};
+        startNumber.setMinValue(8);
+        startNumber.setMaxValue(18);
+        startNumber.setDisplayedValues(hoursDebut);
+        startNumber.setWrapSelectorWheel(false);
+
+        String[] hoursFin = new String[]{"9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"};
+
+        endNumber.setMinValue(9);
+        endNumber.setMaxValue(19);
+        endNumber.setDisplayedValues(hoursFin);
+        endNumber.setWrapSelectorWheel(false);
+
+
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
@@ -96,28 +121,42 @@ public class ULMActivity extends AppCompatActivity {
 
                 if (isWithinOpeningPeriod || isWeekend) {
                     selectedDate = LocalDateTime.of(selectedYear, selectedMonth, selectedDay, 0, 0);
-
-
                 } else {
                     Toast.makeText(ULMActivity.this, "Date en dehors des créneaux", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        robin.setOnClickListener(new View.OnClickListener() {
+        startNumber.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker numberPicker, int i, int i1) {
+                heureDebut = startNumber.getValue();
+                Log.d("début value", heureDebut + "");
+            }
+        });
+
+        endNumber.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker numberPicker, int i, int i1) {
+                heureFin = endNumber.getValue();
+                Log.d("fin value", heureFin + "");
+            }
+        });
+
+        autogire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectedULM = "robin";
-                Toast.makeText(ULMActivity.this, "Robin choisi", Toast.LENGTH_SHORT).show();
+                selectedULM = "autogire";
+                Toast.makeText(ULMActivity.this, "Autogire choisi", Toast.LENGTH_SHORT).show();
             }
 
         });
 
-        piper.setOnClickListener(new View.OnClickListener() {
+        ulm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectedULM = "piper";
-                Toast.makeText(ULMActivity.this, "Piper choisi", Toast.LENGTH_SHORT).show();
+                selectedULM = "ulm";
+                Toast.makeText(ULMActivity.this, "ULM choisi", Toast.LENGTH_SHORT).show();
             }
 
         });
@@ -125,34 +164,60 @@ public class ULMActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (heureFin - heureDebut < 1) {
+                    Toast.makeText(ULMActivity.this, "La durée de la réservation doit être d'au moins 1 heure", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (selectedDate == null) {
+                    Toast.makeText(ULMActivity.this, "Veuillez sélectionner une date", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (selectedULM == null) {
+                    Toast.makeText(ULMActivity.this, "Veuillez choisir un type d'ULM", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 checkAndSaveDate();
             }
-
         });
+
 
 
     }
 
     private void checkAndSaveDate() {
-        DatabaseReference reservedDatesRef = FirebaseDatabase.getInstance().getReference("DatesChoisisULM/" + selectedULM);
+        DatabaseReference ulmRef = FirebaseDatabase.getInstance().getReference("DatesChoisisULM/" + selectedULM);
 
-        reservedDatesRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        ulmRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 boolean isDateReserved = false;
 
                 for (DataSnapshot dateSnapshot : dataSnapshot.getChildren()) {
-                    LocalDateTime reservedDate = LocalDateTime.parse(dateSnapshot.getValue(String.class));
-                    // reservedDate.getHour()
-                    // TODO
-                    if (reservedDate != null && reservedDate.equals(selectedDate)) {
-                        isDateReserved = true;
-                        break;
+                    String dateKey = dateSnapshot.getKey();
+                    if (dateKey != null && dateKey.equals(selectedDate.toString())) {
+                        Integer reservedHeureDebutValue = dateSnapshot.child("heureDebut").getValue(Integer.class);
+                        Integer reservedHeureFinValue = dateSnapshot.child("heureFin").getValue(Integer.class);
+
+                        if (reservedHeureDebutValue != null && reservedHeureFinValue != null) {
+                            int reservedHeureDebut = reservedHeureDebutValue.intValue();
+                            int reservedHeureFin = reservedHeureFinValue.intValue();
+
+                            if ((heureDebut >= reservedHeureDebut && heureDebut < reservedHeureFin) ||
+                                    (heureFin > reservedHeureDebut && heureFin <= reservedHeureFin) ||
+                                    (heureDebut <= reservedHeureDebut && heureFin >= reservedHeureFin)) {
+                                isDateReserved = true;
+                                break;
+                            }
+                        }
                     }
                 }
 
                 if (isDateReserved) {
-                    Toast.makeText(ULMActivity.this, "Cette date est déjà réservée pour cet avion", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ULMActivity.this, "Créneaux horaires indisponibles pour cette date", Toast.LENGTH_SHORT).show();
                 } else {
                     saveData();
                     saveDate();
@@ -161,10 +226,11 @@ public class ULMActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(ULMActivity.this, "Erreur lors de la vérification de la date", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ULMActivity.this, "Erreur lors de la vérification des dates", Toast.LENGTH_SHORT).show();
             }
         });
     }
+
 
 
 
@@ -173,12 +239,14 @@ public class ULMActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String noeud = sharedPreferences.getString("title", "");
 
-        DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(noeud);
+        DatabaseReference titleRef = FirebaseDatabase.getInstance().getReference("AeroClubUser").child(noeud + "/" + "date_uml_" + selectedULM);
+        DatabaseReference reservationRef = titleRef.child(selectedDate.toString());
 
         Map<String, Object> updateData = new HashMap<>();
-        updateData.put("date_uml_" + selectedULM, selectedDate.toString());
+        updateData.put("heureDebut", heureDebut);
+        updateData.put("heureFin", heureFin);
 
-        titleRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
+        reservationRef.updateChildren(updateData).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
@@ -195,45 +263,32 @@ public class ULMActivity extends AppCompatActivity {
     }
 
     private void saveDate() {
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        String noeud = sharedPreferences.getString("title", "");
 
-        DatabaseReference datesRef = FirebaseDatabase.getInstance().getReference("DatesChoisisULM/" + selectedULM);
+        DatabaseReference ulmRef = FirebaseDatabase.getInstance().getReference("DatesChoisisULM/" + selectedULM + "/" + noeud);
+        DatabaseReference reservationRef = ulmRef.child(selectedDate.toString());
 
-        datesRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        Map<String, Object> reservationData = new HashMap<>();
+        reservationData.put("heureDebut", heureDebut);
+        reservationData.put("heureFin", heureFin);
+
+        reservationRef.updateChildren(reservationData).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                List<String> existingDates = new ArrayList<>();
-
-                for (DataSnapshot dateSnapshot : dataSnapshot.getChildren()) {
-                    String existingDate = dateSnapshot.getValue(String.class);
-                    if (existingDate != null) {
-                        existingDates.add(existingDate);
-                    }
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(ULMActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-
-                existingDates.add(selectedDate.toString());
-
-                datesRef.setValue(existingDates).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(ULMActivity.this, "Enregistré !", Toast.LENGTH_SHORT).show();
-                            finish();
-                        }
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(ULMActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
-                    }
-                });
             }
-
+        }).addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(ULMActivity.this, databaseError.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ULMActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }
+
 
 
 }

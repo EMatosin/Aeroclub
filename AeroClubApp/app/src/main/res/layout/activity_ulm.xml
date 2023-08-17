@@ -31,6 +31,62 @@
             android:background="@drawable/white_frame"
             android:firstDayOfWeek="2" />
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heure début "
+                    android:textStyle="italic"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"/>
+
+                <NumberPicker
+                    android:id="@+id/hourStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="Heure fin"
+                    android:textStyle="italic" />
+
+                <NumberPicker
+                    android:id="@+id/hourEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,17 +115,17 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/robin"
+                    android:id="@+id/autogire"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:background="@color/white"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/robin"/>
+                    android:src="@drawable/autogire"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Triplace école"
+                    android:text="Autogire Biplace "
                     android:textStyle="italic"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"/>
@@ -85,19 +141,19 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/piper"
+                    android:id="@+id/ulm"
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:background="@color/white"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/piper"/>
+                    android:src="@drawable/ulm2"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:text="Quadriplace de voyage"
+                    android:text="ULM Biplace"
                     android:textStyle="italic" />
             </LinearLayout>
         </LinearLayout>
