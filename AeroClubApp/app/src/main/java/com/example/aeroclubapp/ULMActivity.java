@@ -195,29 +195,37 @@ public class ULMActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 boolean isDateReserved = false;
+                Integer reservedHeureDebut = null;
+                Integer reservedHeureFin = null;
 
-                for (DataSnapshot dateSnapshot : dataSnapshot.getChildren()) {
-                    String dateKey = dateSnapshot.getKey();
-                    if (dateKey != null && dateKey.equals(selectedDate.toString())) {
-                        Integer reservedHeureDebutValue = dateSnapshot.child("heureDebut").getValue(Integer.class);
-                        Integer reservedHeureFinValue = dateSnapshot.child("heureFin").getValue(Integer.class);
+                for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
+                    for (DataSnapshot dateSnapshot : userSnapshot.getChildren()) {
+                        String dateKey = dateSnapshot.getKey();
+                        if (dateKey != null && dateKey.equals(selectedDate.toString())) {
+                            Integer reservedHeureDebutValue = dateSnapshot.child("heureDebut").getValue(Integer.class);
+                            Integer reservedHeureFinValue = dateSnapshot.child("heureFin").getValue(Integer.class);
 
-                        if (reservedHeureDebutValue != null && reservedHeureFinValue != null) {
-                            int reservedHeureDebut = reservedHeureDebutValue.intValue();
-                            int reservedHeureFin = reservedHeureFinValue.intValue();
+                            if (reservedHeureDebutValue != null && reservedHeureFinValue != null) {
+                                reservedHeureDebut = reservedHeureDebutValue;
+                                reservedHeureFin = reservedHeureFinValue;
 
-                            if ((heureDebut >= reservedHeureDebut && heureDebut < reservedHeureFin) ||
-                                    (heureFin > reservedHeureDebut && heureFin <= reservedHeureFin) ||
-                                    (heureDebut <= reservedHeureDebut && heureFin >= reservedHeureFin)) {
-                                isDateReserved = true;
-                                break;
+                                if ((heureDebut >= reservedHeureDebut && heureDebut < reservedHeureFin) ||
+                                        (heureFin > reservedHeureDebut && heureFin <= reservedHeureFin) ||
+                                        (heureDebut <= reservedHeureDebut && heureFin >= reservedHeureFin)) {
+                                    isDateReserved = true;
+                                    break;
+                                }
                             }
                         }
+                    }
+
+                    if (isDateReserved) {
+                        break;
                     }
                 }
 
                 if (isDateReserved) {
-                    Toast.makeText(ULMActivity.this, "Créneaux horaires indisponibles pour cette date", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ULMActivity.this, "Un créneaux est déjà réservé de " + reservedHeureDebut + "h à " + reservedHeureFin + "h.", Toast.LENGTH_SHORT).show();
                 } else {
                     saveData();
                     saveDate();
@@ -230,6 +238,9 @@ public class ULMActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 
 
 
