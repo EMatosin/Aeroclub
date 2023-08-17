@@ -42,16 +42,19 @@ Fonctionnalités :
         - Checklist : Récapitulatif de tous les choix effectués dans l'application avec extraction des données dans la bdd
 
 
+- Portail admin accessible via login spécial et permettant de générer sur le téléphone un rapport pdf contenant l'ensemble des données du parc utilisateur (à voir si depuis cette fenêtre on ne pourrait pas modifier des prix etc..)
+
+
   PROBLEMES EN COURS :
 
   ● Lorsqu'une date est sauvegardée, elle ne peut plus être supprimée : si un utilisateur veut changer une date qu'il a réservé, cela marchera pour lui mais l'ancienne sera toujours conservée
-  dans la table DataReserve --> Pour l'instant cela est indiqué dans l'UI
+  dans la table DataReserve --> Pour l'instant cela est indiqué dans l'UI --> devenu un peu plus complexe avec la nouvelle manière de stocker les dates
 
 
-  ● Lorsqu'un utilisateur veut choisir une seconde date avec un type d'avion auquel il a déjà réservé une date, celle ci sera écrasée : un avion = une date
+  ● Lorsqu'un utilisateur veut choisir une seconde date avec un type d'avion auquel il a déjà réservé une date, celle ci sera écrasée : un avion = une date --> réglé avec tableau de dates à l'intérieur du sous noeud date mais complique le point ci dessus
 
 
-  ● Lorsqu'un utilisateur se reconnecte, cela supprime toute sa bdd et la remet à 0 (facilement réparable mais à faire)
+  
 
 
 
