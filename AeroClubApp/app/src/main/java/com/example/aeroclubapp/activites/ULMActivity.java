@@ -68,6 +68,10 @@ public class ULMActivity extends AppCompatActivity {
 
         autogire = findViewById(R.id.autogire);
 
+        heureDebut = 7;
+
+        heureFin = 8;
+
 
         calendarView.setMinDate(System.currentTimeMillis() - 1000);
 
@@ -83,17 +87,16 @@ public class ULMActivity extends AppCompatActivity {
         endDateCalendar.set(Calendar.DAY_OF_MONTH, 15);
         long endDateMillis = endDateCalendar.getTimeInMillis();
 
-        int dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 
-        String[] hoursDebut = new String[]{"8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"};
-        startNumber.setMinValue(8);
+        String[] hoursDebut = new String[]{"Heure début", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"};
+        startNumber.setMinValue(7);
         startNumber.setMaxValue(18);
         startNumber.setDisplayedValues(hoursDebut);
         startNumber.setWrapSelectorWheel(false);
 
-        String[] hoursFin = new String[]{"9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"};
+        String[] hoursFin = new String[]{"Heure fin", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"};
 
-        endNumber.setMinValue(9);
+        endNumber.setMinValue(8);
         endNumber.setMaxValue(19);
         endNumber.setDisplayedValues(hoursFin);
         endNumber.setWrapSelectorWheel(false);
@@ -160,6 +163,12 @@ public class ULMActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (heureDebut == 7 || heureFin == 8 ) {
+                    Toast.makeText(ULMActivity.this, "Veuillez sélectionner une heure valide", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
 
                 if (heureFin - heureDebut < 1) {
                     Toast.makeText(ULMActivity.this, "La durée de la réservation doit être d'au moins 1 heure", Toast.LENGTH_SHORT).show();

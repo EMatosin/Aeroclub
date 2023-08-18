@@ -33,65 +33,38 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="87dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
-            <LinearLayout
+            <NumberPicker
+                android:id="@+id/hourStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="15dp"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Heure début "
-                    android:textStyle="italic"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"/>
-
-                <NumberPicker
-                    android:id="@+id/hourStart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:layout_weight="1" />
 
 
-            </LinearLayout>
-
-            <LinearLayout
+            <NumberPicker
+                android:id="@+id/hourEnd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="15dp"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="Heure fin"
-                    android:textStyle="italic" />
-
-                <NumberPicker
-                    android:id="@+id/hourEnd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"/>
-
-
-            </LinearLayout>
         </LinearLayout>
 
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:layout_width="229dp"
+            android:layout_height="163dp"
+            android:layout_marginTop="50dp"
             android:adjustViewBounds="true"
+            android:background="@color/white"
             android:scaleType="fitCenter"
-            android:src="@drawable/robin"/>
+            android:layout_gravity="center"
+            android:src="@drawable/robin" />
 
         <TextView
             android:layout_width="wrap_content"
