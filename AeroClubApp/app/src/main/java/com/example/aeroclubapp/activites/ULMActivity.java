@@ -230,7 +230,7 @@ public class ULMActivity extends AppCompatActivity {
                 }
 
                 if (isDateReserved) {
-                    Toast.makeText(ULMActivity.this, "Un créneaux est déjà réservé de " + reservedHeureDebut + "h à " + reservedHeureFin + "h.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ULMActivity.this, "Un créneau est déjà réservé de " + reservedHeureDebut + "h à " + reservedHeureFin + "h.", Toast.LENGTH_SHORT).show();
                 } else {
                     saveData();
                     saveDate();

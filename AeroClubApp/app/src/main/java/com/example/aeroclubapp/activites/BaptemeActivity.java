@@ -85,7 +85,7 @@ public class BaptemeActivity extends AppCompatActivity {
         startNumber.setDisplayedValues(hoursDebut);
         startNumber.setWrapSelectorWheel(false);
 
-        String[] hoursFin = new String[]{"9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"};
+        String[] hoursFin = new String[]{"Heure fin", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"};
 
         endNumber.setMinValue(8);
         endNumber.setMaxValue(19);
